@@ -1,0 +1,9 @@
+.hideMe {
+  visibility: hidden !important;
+  height: 0 !important;
+
+  * {
+    visibility: hidden !important;
+    height: 0 !important;
+  }
+}

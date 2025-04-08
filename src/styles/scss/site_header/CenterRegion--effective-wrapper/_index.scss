@@ -1,0 +1,6 @@
+// This the index file for the _effective wrapper_ (#Region_0) in
+// the site header's center region (#CenterRegion)
+
+@forward './layout-CenterRegion';
+@forward './charms-and-search/'; // #Region_1
+@forward './header-buttons/'; // #headerButtonsRegionId

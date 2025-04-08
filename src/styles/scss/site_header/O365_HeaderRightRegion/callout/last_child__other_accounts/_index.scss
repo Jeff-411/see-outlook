@@ -1,0 +1,10 @@
+@forward './background-color';
+@forward './account-list';
+@forward './account-list-actions';
+
+// account list - wrapper
+#mectrl_main_body .mectrl_accountList_container {
+  box-sizing: content-box;
+  margin-top: 20px;
+  padding-bottom: 30px;
+}

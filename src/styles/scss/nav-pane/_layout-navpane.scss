@@ -1,0 +1,47 @@
+@use './vars-nav-pane' as *;
+
+// navpane parent
+.LBktY {
+  margin-left: 0;
+}
+
+[aria-label='Navigation pane'] {
+  max-width: unset;
+  min-width: unset;
+}
+
+/** Note:
+ *  The visibility of the navpane (.Yd48r) is determined CURRENTLY
+ *  by the class of its 1st (and only) child as indicated below:
+ *     - Hide: .Yd48r > .kTUsm.Ni89i
+ *     - Show: .Yd48r > .kTUsm.a7Ps_
+ *
+ *  However, Outlook has a history of creating hide/show toggles
+ *  by moving elements in and out of the DOM.
+ *
+ *  So, for safety's sake, this code is scoped to focus
+ *  exclusively on the navpane when it is visible. It
+ *  does this by using the top-level selector below:
+ */
+.Yd48r:has(.kTUsm.a7Ps_) {
+  // width: calc($Outlook-width * $width-scale);
+  width: calc($default-outlook-navpane-width * $navepane-width-scale);
+  border: $navpane-border-width solid $navpane-border-color;
+  margin-left: $trigger-width;
+
+  // triggers
+  [title='Search Folders'],
+  [title='New group'] {
+    height: fit-content;
+    border: $navItem-border-width solid $navItem_trigger-border-color;
+
+    > span {
+      padding: 10px 0;
+      padding-left: calc($navpane-left-offset - $navItem-border-width);
+    }
+  }
+
+  [title='New group'] {
+    margin-top: 16px;
+  }
+}

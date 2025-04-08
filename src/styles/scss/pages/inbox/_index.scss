@@ -1,0 +1,13 @@
+// index: inbox page
+
+// ****** SOME OUTLOOK OPTIONS ARE NOT SUPPORTED  ******
+//
+//     See: `inbox/README/notes-inbox.md` for details.
+//
+// *****************************************************
+
+@forward './layout-inbox';
+@forward './a_toolbar/';
+@forward './b_headers-deleted-junk-pages/';
+@forward './c_sort-bar/';
+@forward './d_mail-list/';

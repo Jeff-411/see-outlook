@@ -1,0 +1,18 @@
+[data-app-section='CalendarModule'] {
+  * {
+    font-size: 18px;
+  }
+
+  // .qKTE2 {
+  //   flex-direction: column;
+  //   border: 1px solid red;
+  // }
+
+  #leftPaneContainer {
+    margin-left: -226px;
+
+    &:hover {
+      margin-left: 0;
+    }
+  }
+}

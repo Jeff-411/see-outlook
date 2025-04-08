@@ -1,0 +1,9 @@
+@use '../../../../../../../_abstracts/' as *;
+
+$dropdown-intial-height: 32px;
+$dropdown-padding: 6px;
+
+$border-width: $user-border-sm;
+$border-color: var(--black);
+
+$calendar-icon-size: 60px;

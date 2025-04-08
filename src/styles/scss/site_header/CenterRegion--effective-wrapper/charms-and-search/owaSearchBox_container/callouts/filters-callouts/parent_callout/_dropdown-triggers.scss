@@ -1,0 +1,16 @@
+@use './vars-filter-parent' as *;
+
+.ms-Callout-main:has([title='Search in']) > .YljlO {
+  // All folders | Read status
+  .ms-Dropdown-container {
+    // Create a bit of space between the Dropdown's bottom border, and
+    // the bottom of the Dropdown's title and chevron.
+
+    padding-bottom: $dropdown-padding;
+
+    span {
+      height: calc($dropdown-intial-height + $dropdown-padding + $border-width);
+      top: $dropdown-padding;
+    }
+  }
+}

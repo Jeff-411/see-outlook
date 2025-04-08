@@ -1,0 +1,170 @@
+// Read page - attachments - wrappers
+
+// MAIN WRAPPERS (layout & shared layout properties)
+// outer wrapper
+.l8Tnu.T3idP.hg7Eg {
+  margin: 0;
+}
+
+// effective wrapper
+.RrjjU {
+  padding: var(--page-30) 0;
+  border-top: var(--read-atach-bdr-width) solid var(--read-atach-bdr-color);
+}
+
+// 'images' & 'documents' wrappers (shared properties)
+.E_kRz.y_q78,
+.E_kRz.srnS5 {
+  width: calc(100% - (var(--read-atach-wrap-ml) * 2));
+  max-height: fit-content;
+  margin-left: var(--read-atach-wrap-ml);
+  padding-right: var(--page-20);
+}
+
+// The code for each of the individual sections ('images', 'documents', and
+// 'action buttons') can be found in its own file.
+
+// .E_kRz.y_q78 {
+//   margin-bottom: var(--page-30);
+//   padding-bottom: var(--page-20);
+//   border-bottom: var(--read-atach-bdr-width) solid var(--read-atach-bdr-color);
+
+//   // title & filesize overlay ( remove )
+//   //
+//   //       *** NOTE: Disable 'mouseout' event listener to update ***
+//   //
+//   ._2Gink_U0fxeuCK9FY0AvaC.LqQLtlFtGuYxUmpHUptpk {
+//     display: none;
+//   }
+// }
+
+//
+// .E_kRz.srnS5 {
+//   *:not(i) {
+//     width: unset;
+//     min-width: unset;
+//     max-width: unset;
+//     box-sizing: border-box;
+//   }
+//   // each attachment (Y0d3P)
+//   > div {
+//     display: block;
+//     overflow: unset;
+//     margin: var(--page-2) var(--page-20) var(--page-10) var(--page-2);
+
+//     // inner wrapper ( triggers hover ) (GpKSR C1V5C WM3Zr ERPBZ bK9dl)
+//     > div {
+//       height: fit-content;
+//       // padding: var(--page-20) var(--page-30) var(--page-20) 0;
+//       border-width: var(--read-atach-bdr-width);
+//       border-color: var(--read-atach-bdr-color);
+
+//       &:hover {
+//         background-color: transparent;
+//         border-color: $color-1;
+
+//         * {
+//           background-color: transparent;
+//         }
+//       }
+
+//       // outer content wrapper ([draggable="true"])
+//       > div {
+//         // inner content wrapper (.feh0T)
+//         > div {
+//           // file icon | file title | file size (.JA9Uf.YyULm)
+//           > :nth-child(1) {
+//             // file icon (.WwCcl) (> :nth-child(1))
+//             // > i // _{margin: var(--read-atach-icon-my) var(--page-10);}
+
+//             // file title & size - outer wrapper (.uDIro)
+//             > div:nth-child(2) {
+//               height: var(--read-atach-title-height);
+//               padding: 0;
+
+//               // file title & size - inner wrapper (no attributes)
+//               > div {
+//                 // file title (.VlyYV.PQeLQ.QEiYT) (overflow hidden)
+//                 > :first-child {
+//                   // max-width: 90%;
+//                   max-width: 60vw;
+
+//                   font-size: var(--read-atach-title-size);
+//                   font-weight: var(--read-atach-title-weight);
+//                 }
+
+//                 // file size ( remove )
+//                 > :last-child {
+//                   display: none;
+//                 }
+//               }
+//             }
+//           }
+
+//           // chevron btn
+//           > :nth-child(2) {
+//             position: relative;
+//             height: var(--read-atach-title-size);
+//             margin: 0 14px;
+//             background-color: #ff0;
+//             border: 2px solid black;
+//             border-radius: 4px;
+
+//             i {
+//               font-size: var(--read-atach-title-size);
+//               color: black;
+//               font-weight: 600;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+/** Global action buttons (bottom pane)
+   * Show/Hide atach's | Download All | Save All to 1-Drive
+   */
+// ====================================================================
+// .h7gZn {
+//   box-sizing: border-box;
+
+//   top: 0;
+//   display: flex;
+//   justify-content: flex-start;
+//   padding: var(--page-8) var(--page-20);
+//   border-radius: 0;
+
+//   button {
+//     font-size: var(--read-atach-btm-text-size);
+//     font-weight: var(--read-atach-btm-text-weight);
+//     color: var(--read-atach-btm-text-color);
+//   }
+
+//   // Show/Hide all
+//   > span:first-of-type {
+//     display: none;
+//   }
+
+//   // Download all | Save All to 1-Drive
+//   > button,
+//   > span:last-of-type {
+//     height: calc(var(--read-atach-btm-text-size) + var(--page-8));
+//     margin: 0;
+//     padding-left: var(--page-20);
+//     padding-right: var(--page-20);
+//     background-color: var(--white);
+//     border-radius: 0;
+//   }
+
+//   // Download all
+//   > button {
+//     margin-right: var(--page-30);
+//   }
+
+//   // Save All to 1-Drive
+//   > span:last-of-type {
+//     display: flex;
+//     align-items: center;
+//   }
+// }

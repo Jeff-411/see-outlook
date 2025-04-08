@@ -1,0 +1,21 @@
+// Inline spell checker
+html > editor-card div[aria-labelledby='replacement-list'] {
+  // Remove title & advertisement
+  label,
+  > div:last-child {
+    display: none;
+  }
+  // Resize text
+  > div:nth-child(2),
+  > div:nth-child(3) {
+    * {
+      font-size: var(--page-24);
+      font-weight: 600;
+      color: black;
+    }
+  }
+  // Add top border to 'Ignore all'
+  > div:nth-child(3) {
+    border-top: var(--page-1) solid var(--black);
+  }
+}

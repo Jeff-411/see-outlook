@@ -1,0 +1,6 @@
+// index: Write page - toolbar and header
+@use '../vars-write' as *;
+
+@forward './components'; // fonts | colors | icons
+@forward './toolbar/'; // send | trash | open in new window
+@forward './header/'; // recipients and subject

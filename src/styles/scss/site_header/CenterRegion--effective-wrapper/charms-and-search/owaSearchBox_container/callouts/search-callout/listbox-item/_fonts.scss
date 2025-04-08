@@ -1,0 +1,33 @@
+@use '../../../_vars-search/' as *;
+
+// #searchSuggestionsCallout - listbox - listbox item
+#searchSuggestionsCallout {
+  // listbox
+  [role='listbox'] {
+    // listbox item
+    > div,
+    > button {
+      // Defaults
+      * {
+        font-size: $search-fs-md;
+        font-weight: $search-fw;
+        line-height: unset !important;
+        color: var(--black);
+      }
+
+      // OVERRIDE FONT SIZE
+      // People suggestion - bottom row
+      .WGzTW,
+      // File suggestion - bottom row
+      .Izgjv > .OYeAw,
+      // File suggestion - opened
+      .L7Qbg,
+      // Email suggestion - bottom row
+      .eAktR > div,
+      // Email suggestion -date
+      .oIGv_ {
+        font-size: $search-fs-sm;
+      }
+    }
+  }
+}

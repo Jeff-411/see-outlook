@@ -1,0 +1,19 @@
+// index: Inbox - headers for 'Deleted' and 'Junk Email' pages
+@use '../../../_abstracts/fonts' as *;
+
+.XW2m0.LyMTI:not(.c_ifE) > .bkYAr > .YzCsF.VXa5s.L0ZVL {
+  display: none;
+
+  padding-left: 8px !important;
+
+  // fonts
+  * {
+    font-size: $user-fs-lg;
+    font-weight: $user-fw;
+  }
+
+  // hide
+  i {
+    display: none;
+  }
+}

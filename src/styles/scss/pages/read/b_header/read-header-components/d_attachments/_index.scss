@@ -1,0 +1,6 @@
+// index: Read page - attachments
+
+@forward './wrappers'; // layout & shared layout properties
+@forward './images'; // top pane
+@forward './documents'; // middle pane
+@forward './action-buttons'; // bottom pane

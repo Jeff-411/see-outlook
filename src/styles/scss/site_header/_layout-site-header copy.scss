@@ -1,0 +1,28 @@
+@use './vars-site-header' as *;
+
+// top-level Site Header layout with hide/show toggle
+// parent container: `#OwaTitleBar`
+
+#o365header // outer wrapper
+{
+  box-sizing: content-box;
+  padding: $py 0;
+  margin-top: $top-margin;
+  border-bottom: $border-width solid $border-color;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &:hover {
+    margin-top: initial;
+    border-top: $border-width solid $border-color;
+  }
+}
+
+#O365_NavHeader // inner wrapper
+{
+  height: calc($base-height + $O365_NavHeader-border-width) !important;
+  align-items: center;
+  border-bottom: $O365_NavHeader-border-width solid var(--black);
+}

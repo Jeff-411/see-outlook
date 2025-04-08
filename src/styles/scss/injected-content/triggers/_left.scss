@@ -1,0 +1,28 @@
+@use '../../_abstracts/injected-elements' as *;
+
+#custom_menu-left {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: $custom_menu-left-width;
+  height: 100%;
+  top: $custom_menu-top-height;
+  z-index: 1;
+
+  > #trigger-navpane,
+  > #trigger-leftRail {
+    position: relative;
+    width: 100%;
+  }
+
+  > #trigger-navpane {
+    height: 100%;
+    background-color: $trigger-navpane-color;
+  }
+
+  > #trigger-leftRail {
+    height: 100px;
+    height: 0;
+    background-color: $trigger-leftRail-color;
+  }
+}

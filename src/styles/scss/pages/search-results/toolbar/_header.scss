@@ -1,0 +1,27 @@
+@use '../../../_abstracts/' as *;
+
+// search-results - toolbar - header
+.XW2m0.LyMTI:not(.c_ifE) > .bkYAr > .rEzfP.uNaZF.Gj2Pr.MtQpS.m74HI.e2Pgo.rf8FT {
+  /** 
+   * header button height + ::before height
+   */
+  height: 54px;
+  & {
+    background-color: var(--white);
+  }
+
+  .ZYym6.uNaZF.m74HI.rf8FT.rnJ_c // checkbox
+  {
+    @include checkbox;
+    & {
+      background-color: $color-4;
+    }
+  }
+
+  [role='tablist'] // header buttons
+  {
+    @include test;
+    margin-right: 10px !important;
+    border-right: 2px solid $color-1;
+  }
+}

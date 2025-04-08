@@ -1,0 +1,35 @@
+@use '../../../_abstracts/fonts' as *;
+
+// Inbox toolbar right-side buttons: Select | Filter | By Date
+.XW2m0.LyMTI:not(.c_ifE) > .bkYAr > div > ._EhYJ {
+  .p4pwT.bZBXb {
+    display: none;
+
+    i,
+    #MailListSelectAllSLV,
+    #mailListFilterMenu,
+    #mailListSortMenu {
+      font-size: $user-fs-sm;
+      font-weight: 600;
+    }
+
+    i {
+      display: none;
+    }
+
+    > .ac0xq.rf8FT // Select (debug placeholder)
+    {
+      visibility: visible;
+    }
+
+    > #mailListFilterMenu // Filter
+    {
+      margin-left: 20px !important;
+    }
+
+    > .tbgM1 #mailListSortMenu // By Date
+    {
+      margin-right: 20px !important;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@use '../../../../../_abstracts/' as *;
+@use '../../../vars-write' as *;
+
+// write page header - recipients - layout
+.dMm6A.AiSsJ > .QFieH.J8sYv > :nth-child(1) {
+  // grid
+  > .FO1cd.vJikE {
+    padding: 12px 12px 8px; // Outlook default
+
+    // Active recipient buttons (displayed as direct children on left side)
+    > .L6dso.SZoKq button, // To 
+    > .Ss04u.ZkASU button, // Cc 
+    > .Ixvzd.kN6HG button // Bcc
+    {
+      padding-top: 9px !important;
+      padding-bottom: 12px !important;
+      border: 2px solid var(--black);
+      @include onhover--set-border-color;
+    }
+
+    // input wrapper
+    span.fui-Input {
+      border-bottom: $user-border-sm solid var(--black);
+
+      .ApKtB // selected recipients - outer wrapper
+      {
+        * {
+          box-sizing: border-box;
+        }
+
+        > [role='textbox'] // selected recipients - inner wrapper
+        {
+          display: flex;
+          flex-wrap: wrap;
+          min-height: 48px;
+        }
+      }
+    }
+  }
+}

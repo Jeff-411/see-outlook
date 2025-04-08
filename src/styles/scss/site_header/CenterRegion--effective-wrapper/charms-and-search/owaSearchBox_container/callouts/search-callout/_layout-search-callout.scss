@@ -1,0 +1,33 @@
+@use '../../../../../../_abstracts/mixins' as *;
+@use '../../_vars-search/' as *;
+
+#searchSuggestionsCallout {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100%;
+  max-width: $search-callout-max-width !important;
+
+  @include reset-margin-padding;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  > .ms-Callout-main {
+    width: 100%;
+  }
+
+  // listbox
+  [role='listbox'] {
+    max-width: $search-callout-listbox-max-width;
+  }
+
+  // listbox item
+  [role='listbox'] > * {
+    height: fit-content !important;
+    margin-bottom: 3px !important;
+    padding: 10px 16px !important;
+  }
+}

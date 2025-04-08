@@ -1,0 +1,92 @@
+@use '../../../../../_abstracts/' as *;
+@use '../../../vars-read' as *;
+
+// Read page header > Messages-action buttons
+.uSg02 .lT19A {
+  height: 60px;
+
+  // effective wrapper
+  .ms-FocusZone {
+    // border: 1px solid black; //debug
+    height: fit-content;
+    margin: 0 2px 0 -2px !important;
+  }
+
+  // menu wrapper
+  .ms-OverflowSet {
+    align-items: flex-end;
+    padding: 0 5px 0 8px !important;
+  }
+
+  // menu item wrapper
+  .ms-OverflowSet-item {
+    margin: 0 20px !important;
+  }
+}
+
+// action buttons - buttons wrapper
+// prettier-ignore
+.Jj1JU > div {
+  // ALL BTNS
+    // dividers
+    .HpVMj.E0lA9 {
+      visibility: hidden;
+    }
+
+    // buttons
+    button {
+      // icon
+      i {
+        font-size: 48px;
+        font-weight: $user-fw;
+      }
+      // label ( hide )
+      .ms-Button-flexContainer {
+        // flex-direction: column-reverse; // position label above/below
+        .ms-Button-label {
+          display: none;
+        }
+      }
+
+      &:hover {
+        background-color: transparent;
+        * {
+          background-color: transparent;
+        }
+      }
+  }
+
+  // INDIVIDUAL BTNS - MODIFY
+    // 'Immersive reader' btn
+    [aria-label='Show in immersive reader'] i {
+      color: $color-1;
+    }
+
+    // 'More' btn
+    .ms-OverflowSet-overflowButton {
+      --btn-size: 44px;
+      margin-right: 4px !important;
+
+      button {
+        width: var(--btn-size);
+        height: var(--btn-size);
+        margin: 4px 0 !important;
+        background-color: $color-1;
+        &:hover {
+          background-color: $color-1 !important;
+          * {
+            background-color: transparent !important;
+          }
+        }
+        
+      }
+      
+      i {
+        color: var(--white);
+      }
+  }
+
+  // INDIVIDUAL BTNS - HIDE
+    // 'Apps' btn & associated divider
+    > :nth-last-child(2), > :nth-last-child(3) {display: none;}
+}

@@ -1,0 +1,36 @@
+@use '../../../../../../../_abstracts/' as *;
+@use '../../../../../../vars-site-header' as *;
+@use '../../../_vars-search/' as *;
+
+// #searchSuggestionsCallout - listbox item - header
+#searchSuggestionsCallout {
+  // listbox
+  [role='listbox'] {
+    // listbox item - header
+    > div:first-child {
+      // margin-bottom: none !important;
+      padding-bottom: 16px !important;
+      background-color: var(--white);
+      // border-bottom: 4px solid var(--black);
+      border-top: none;
+      border-bottom: 4px solid $color-4;
+
+      button {
+        height: $search-callout-hdr-btn-size !important;
+        margin-right: 10px !important;
+        padding: 10px !important;
+        border: $user-border-md solid transparent;
+
+        &:hover {
+          border: $user-border-md solid $color-4;
+        }
+      }
+
+      button.is-selected::before {
+        height: 6px !important;
+        margin-top: 4px !important;
+        background-color: $color-1;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@use '../../../_abstracts/mixins' as *;
+
+// index: Read page > Message body
+.ulb23.GNqVo.allowTextSelection.OuGoX {
+  @include read-and-write-pages--body;
+}

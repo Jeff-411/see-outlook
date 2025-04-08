@@ -1,0 +1,47 @@
+// Read page - attachments - action buttons (bottom pane)
+
+// Show all atachments | Save all to OneDrive | Download all
+.h7gZn {
+  display: none !important;
+  background-color: aqua; // debug
+  box-sizing: border-box;
+
+  top: 0;
+  display: flex;
+  justify-content: flex-start;
+  padding: var(--page-8) var(--page-20);
+  border-radius: 0;
+
+  button {
+    font-size: var(--read-atach-btm-text-size);
+    font-weight: var(--read-atach-btm-text-weight);
+    color: var(--read-atach-btm-text-color);
+  }
+
+  // Show/Hide all
+  > span:first-of-type {
+    display: none;
+  }
+
+  // Download all | Save All to 1-Drive
+  > button,
+  > span:last-of-type {
+    height: calc(var(--read-atach-btm-text-size) + var(--page-8));
+    margin: 0;
+    padding-left: var(--page-20);
+    padding-right: var(--page-20);
+    background-color: var(--white);
+    border-radius: 0;
+  }
+
+  // Download all
+  > button {
+    margin-right: var(--page-30);
+  }
+
+  // Save All to 1-Drive
+  > span:last-of-type {
+    display: flex;
+    align-items: center;
+  }
+}

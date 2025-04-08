@@ -1,0 +1,10 @@
+// Write page variables
+@use '../../_abstracts/' as *;
+
+$bar-fs: $user-fs-md;
+$bar-border-width: $user-border-md;
+$bar-padding-top: 4px;
+$bar-magic-number: 4px; // Magic number - don't know, don't care!
+
+$bar-width: calc($bar-fs * 10);
+$bar-height: calc(($bar-border-width * 2) + $bar-fs + $bar-padding-top + $bar-magic-number);

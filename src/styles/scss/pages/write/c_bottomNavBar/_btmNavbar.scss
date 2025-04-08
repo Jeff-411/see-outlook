@@ -1,0 +1,38 @@
+// index: Write page bottom navBar (Navigate between open drafts & the Inbox)
+@use '../../../_abstracts/' as *;
+@use '../vars-write' as *;
+
+.nuum5 {
+  align-items: center !important;
+  min-height: $bar-height !important;
+  padding-top: $bar-padding-top !important;
+  background-color: var(--neutralDark) !important;
+  border-color: var(--neutralDark) !important;
+
+  * {
+    font-size: $bar-fs !important;
+    @include user-fw-and-color;
+    background-color: $user-bg !important;
+  }
+
+  i[data-icon-name='Edit'] {
+    display: none;
+  }
+
+  > div {
+    max-width: unset;
+    width: $bar-width;
+    // border: 4px solid $color-4;
+    border: 4px solid transparent;
+  }
+
+  // // Inbox tab
+  > :first-child {
+    width: fit-content;
+  }
+
+  // active tab
+  > .WkjaK.KaP9I {
+    border-color: $color-1;
+  }
+}

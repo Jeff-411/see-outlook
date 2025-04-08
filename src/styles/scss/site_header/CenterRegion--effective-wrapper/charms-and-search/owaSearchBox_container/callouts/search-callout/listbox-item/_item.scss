@@ -1,0 +1,91 @@
+@use '../../../../../../../_abstracts/colors' as *;
+@use '../../../../../../vars-site-header' as *;
+@use '../../../_vars-search/' as *;
+
+// #searchSuggestionsCallout - listbox - listbox item
+#searchSuggestionsCallout {
+  // listbox
+  [role='listbox'] {
+    // background-color: $color-4;
+    background-color: var(--themePrimary);
+
+    // listbox item
+    > * {
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      &:hover {
+        background: var(--white) !important;
+        border-color: $color-2;
+
+        * {
+          background: var(--white) !important;
+        }
+      }
+
+      i, 
+      [role='img'] // persona images
+      {
+        display: none;
+      }
+
+      .U4Ms7 // content and date
+      {
+        gap: 20px;
+      }
+
+      // CONTENT
+      .rSCR0, // top row - Email Suggestions
+      .bK1bv, // top row - File Suggestions 
+      .rPhnB  // top row - People Suggestions
+      {
+        margin-bottom: 10px !important;
+      }
+
+      .NxTZN // a word's first nth character(s) that match the search term
+      {
+        color: $color-2 !important;
+      }
+
+      .ckSUi /** Workaround for an overflow issue in "Email Suggestions" items
+       *  ISSUE
+       *    When the location of the `.NxTZN` divs on the lines generated 
+       *    by the content of the `.rSCR0` and `.eAktR` divs falls _beyond_ 
+       *    the width of the `.U4Ms7` div, the line is not truncated.
+       *
+       *    Instead the overflow continues to be displayed until it reaches 
+       *    the right edge of the `.yMBVD` div. 
+       *  
+       *  SOLUTION
+       *    JavaScript should resolve this issue properly.
+       *
+       *    In the meantime, the CSS code block below at least truncates
+       *    the lines at the right edge of the `.U4Ms7` div.
+       */ {
+        .rSCR0, // top row
+        .eAktR // bottom row
+        {
+          overflow: hidden;
+        }
+      }
+      // end CONTENT
+
+      .ab_6m // date
+      {
+        min-width: 150px;
+        max-width: 150px;
+        flex-direction: row;
+        background-color: var(--white);
+
+        .oIGv_ {
+          overflow: unset;
+          text-overflow: unset;
+
+          display: flex;
+          flex-wrap: wrap;
+          white-space: break-spaces;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

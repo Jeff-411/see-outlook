@@ -1,0 +1,19 @@
+.mectrl_body {
+  // font size
+  /**
+ *  account name
+ *  account email address
+ *  account link
+ *  profile link
+ *  sign out
+ *  logged-in accounts - name and email
+ */
+  #mectrl_currentAccount_primary,
+  #mectrl_currentAccount_secondary,
+  #mectrl_viewAccount,
+  #mectrl_ShellAboutMe,
+  #mectrl_body_signOut,
+  .mectrl_accountItemInfo > div {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,13 @@
+// index: callouts
+
+// Scope:
+//  This folder has global scope. It:
+//    1. sets the top-level layout for all callouts,
+//    2. sets the border for all callouts, and
+//    3. handles the context-menus for the navpane and inbox.
+//
+//  Component-specific callouts are located in the folder
+//  of the component to which they appertain.
+
+@forward './layout-and-border';
+@forward './context-menus/';

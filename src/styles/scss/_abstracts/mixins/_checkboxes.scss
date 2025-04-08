@@ -1,0 +1,83 @@
+@use '../colors' as *;
+@use '../fonts' as *;
+@use '../borders' as *;
+
+@mixin checkbox {
+  $checkbox-icon-size: $user-fs-sm;
+  $checkbox-size: calc($checkbox-icon-size * 1.154);
+
+  margin-right: 8px !important;
+
+  // width | height - parent
+  width: $checkbox-size !important;
+  height: $checkbox-size !important;
+
+  // width | height - all children
+  * {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ms-Checkbox-checkbox {
+    top: 0;
+    left: 0;
+    border: 2px solid var(--black);
+
+    &::after {
+      border-color: transparent;
+    }
+
+    i {
+      font-size: $checkbox-icon-size;
+      font-weight: 900;
+      color: var(--white);
+    }
+  }
+}
+
+@mixin checkbox-heading {
+  // fonts
+  > .PhBV4,
+  > .ms-Link.SPZ13 {
+    font-size: $user-fs-sm;
+    font-weight: 600;
+  }
+
+  // Number selected
+  > .PhBV4 {
+    color: var(--black);
+  }
+
+  // "Clear selection"
+  > .ms-Link.SPZ13 {
+    margin-left: 14px !important;
+  }
+}
+
+@mixin test {
+  background-color: var(--white);
+  border: none;
+
+  button {
+    // height: $search-callout-hdr-btn-size !important;
+    height: 48px !important;
+    margin-right: 10px !important;
+    padding: 10px !important;
+    border: $user-border-md solid transparent;
+
+    &:hover {
+      border: $user-border-md solid $color-4;
+    }
+
+    .ms-Pivot-text // button text
+    {
+      width: fit-content;
+    }
+  }
+
+  button.is-selected::before {
+    height: 6px !important;
+    margin-top: 4px !important;
+    background-color: $color-1;
+  }
+}

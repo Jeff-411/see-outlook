@@ -1,0 +1,12 @@
+// Two Options for handling the #leftCharmsRegion are provided below.
+// To explore the options, please see: "site_header > notes-site_header.md".
+// Just uncomment the option you want (and comment out the other one).
+
+// ============================================================================
+// OPTION 1 (default)
+// prettier-ignore
+#leftCharmsRegion {display: none !important;}
+
+// ============================================================================
+// OPTION 2 (About 80% complete, so you'll need to tweak it a bit.)
+// @forward './alt_option-show_charms_region';

@@ -1,0 +1,28 @@
+@use './vars-filter-parent' as *;
+
+.ms-Callout-main:has([title='Search in']) > .YljlO {
+  // DATE
+  // effective outer wrapper
+  .ms-DatePicker {
+    flex-basis: calc($calendar-icon-size + 20px);
+
+    .ms-TextField-fieldGroup {
+      height: fit-content;
+
+      input {
+        height: $calendar-icon-size;
+
+        &::placeholder {
+          width: 0;
+        }
+      }
+
+      i {
+        padding: 0;
+        font-size: $calendar-icon-size;
+        font-weight: normal;
+        line-height: unset;
+      }
+    }
+  }
+}

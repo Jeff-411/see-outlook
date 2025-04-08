@@ -1,0 +1,11 @@
+// index: Read page - toolbar and title
+
+@use '../vars-read' as *;
+
+
+@forward './layout';
+@forward './toolbar';
+@forward './title';
+
+// Gotcha: The grayish "border" that appears under the toolbar
+// is actually a box-shadow set by `#BottomBar .Mezkw` in the Ribbon.

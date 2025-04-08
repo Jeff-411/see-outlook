@@ -1,0 +1,39 @@
+@use '../_abstracts/' as *;
+
+// div.ms-ContextualMenu:not(:has([name='Advanced actions'])) {
+div.ms-ContextualMenu {
+  // menu
+  ul:has([name='Remove from Favorites']) {
+    li[role='presentation'] {
+      // margin: 6px 0;
+
+      // .ms-ContextualMenu-itemText {
+      //   font-family: Verdana, Geneva, Tahoma, sans-serif;
+      //   font-size: $user-fs-md;
+      //   font-weight: $user-fw;
+      // }
+
+      > button:not(.is-disabled) .ms-ContextualMenu-itemText {
+        color: $user-text-color;
+      }
+    }
+
+    // li[role='separator'] {
+    //   height: 4px;
+    //   margin: 18px 0 0px;
+    //   background-color: gray;
+    // }
+
+    > :nth-child(1) {
+      // number of items in folder | number unread items
+      .ms-ContextualMenu-itemText {
+        color: $color-4;
+      }
+    }
+
+    > :nth-last-child(2) {
+      // last separator
+      margin: 0 0 4px !important;
+    }
+  }
+}

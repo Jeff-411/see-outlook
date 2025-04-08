@@ -1,0 +1,60 @@
+@use '../../../_abstracts/fonts' as *;
+@use '../../../_abstracts/colors' as *;
+
+// filter buttons
+.XW2m0.LyMTI:not(.c_ifE)
+  > .bkYAr
+  > .rEzfP.uNaZF.Gj2Pr.MtQpS.m74HI.e2Pgo.rf8FT
+  > ._EhYJ.fcAA5 // main wrapper
+  > .x12Be // filters
+{
+  align-self: center;
+
+  > .eik7f.FdX97 // divider
+  {
+    display: none;
+
+    margin-left: 10px !important;
+    font-size: $user-fs-md;
+  }
+
+  > .pg1ce.dTnGs // Scroll buttons
+  {
+    .z4zhQ, // scroll button - left
+    .xuGxH  // scroll button - right
+    {
+      button {
+        background-color: $color-4;
+
+        &:hover {
+          box-shadow: none;
+          background-color: $color-4;
+        }
+
+        span[role="presentation"] // icon wrapper
+        {
+          display: flex;
+          color: white;
+
+          i.fui-Icon-font {
+            font-size: $user-fs-md;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+
+    .ojhdq > button // regular filter buttons
+    {
+      margin-right: 20px !important;
+      padding: 0 0 4px 0 !important;
+      border: none;
+      border-radius: 0;
+      border-bottom: 2px solid var(--black);
+
+      i {
+        display: none;
+      }
+    }
+  }
+}

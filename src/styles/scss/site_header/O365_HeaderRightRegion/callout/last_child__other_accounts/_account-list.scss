@@ -1,0 +1,26 @@
+@use '../../../../_abstracts/' as *;
+
+#mectrl_main_body ul.mectrl_accountList {
+  padding-left: 20px;
+
+  // layout
+  li {
+    padding-bottom: 8px;
+    border-bottom: 2px solid $color-1;
+
+    // inner wrappers
+    .mectrl_accountItem {
+      height: fit-content;
+    }
+  }
+
+  // Hide icons
+  .mectrl_profilepic {
+    display: none;
+  }
+
+  // 'Sign in with a different account'
+  #mectrl_signInItem {
+    font-weight: 600;
+  }
+}

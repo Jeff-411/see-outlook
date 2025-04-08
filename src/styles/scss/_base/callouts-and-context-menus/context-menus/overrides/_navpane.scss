@@ -1,0 +1,16 @@
+@use '../vars-context-menus' as *;
+
+// navpane menu overrides
+div.ms-ContextualMenu // ul wrapper
+{
+  ul:has([name='Mark all as read']) > :nth-child(1) {
+    .ms-ContextualMenu-itemText {
+      color: $context-menu-text-color !important;
+    }
+  }
+
+  ul:has([name="Mark all as read"]) > [role="separator"]:nth-last-child(2) // last separator
+  {
+    margin: 0 0 4px !important;
+  }
+}

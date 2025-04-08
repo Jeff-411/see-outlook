@@ -1,0 +1,16 @@
+@use '../../../_abstracts/mixins' as *;
+
+@forward './message';
+@forward './reply-message';
+@forward './formatting-options';
+@forward './spell-checker';
+
+// Body
+.cBeRi.dMm6A.AiSsJ > div:nth-child(4) {
+  padding-left: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background-color: white !important;
+
+  @include read-and-write-pages--body;
+}

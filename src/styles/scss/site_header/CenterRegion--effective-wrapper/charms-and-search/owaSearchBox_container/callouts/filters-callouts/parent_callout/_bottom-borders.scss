@@ -1,0 +1,23 @@
+@use '../../../../../../../_abstracts/' as *;
+// @use './vars-filter-parent' as *;
+
+.ms-Callout-main:has([title='Search in']) > .YljlO {
+  /** Style 
+   *  - All folders | Read status .Y5PhP
+   *  - From | To | CC
+   *  - Subject | Keywords 
+   *    - class = .wrapper-<a number assigned by Outlook at runtime>
+   *    - Note: Use the .krT3L parent class to exclude .ms-TextField-wrapper 
+   *      divs inside the .ms-DatePicker.EHaNF divs in calendar row (.uXHdS).
+   */
+  .ms-Dropdown-title,
+  .osAOg,
+  .krT3L .ms-TextField-wrapper {
+    border-bottom: $user-border-sm solid $user-text-color;
+  }
+
+  // Remove
+  .ms-DatePicker {
+    border-bottom: none;
+  }
+}

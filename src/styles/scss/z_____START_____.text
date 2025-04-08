@@ -1,0 +1,5 @@
+# Run SASS in terminal using:
+
+sass --watch src/styles/scss/main.scss dist/custom.css --no-source-map --style=compressed
+
+# Local alias: sas

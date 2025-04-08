@@ -1,0 +1,30 @@
+@use '../../../_abstracts/' as *;
+@use '../vars-read' as *;
+
+// Read page - title
+.pMy5S {
+  $read-toolbar-default-width: 166px;
+
+  height: $read-row-height;
+  margin-top: calc($read-row-height * -1) !important;
+  margin-left: $read-toolbar-default-width !important;
+  padding-left: 12px !important;
+
+  * {
+    height: 100%;
+  }
+
+  .XxeQL {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .JdFsz {
+    display: block;
+    font-size: $user-fs-md !important;
+    line-height: $user-fs-md;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

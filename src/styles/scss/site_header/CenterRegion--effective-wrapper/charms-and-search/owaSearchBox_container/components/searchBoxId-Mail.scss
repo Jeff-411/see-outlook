@@ -1,0 +1,15 @@
+@use '../_vars-search/' as *;
+
+// search box
+#searchBoxId-Mail {
+  // input - outer wrapper
+  .gEOUV {
+    height: 100%;
+
+    input {
+      margin-left: 10px;
+      font-size: $search-fs-md;
+      font-weight: $search-fw;
+    }
+  }
+}

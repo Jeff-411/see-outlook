@@ -1,0 +1,63 @@
+// ============================================================================
+// Preview pane for email attachments
+
+// effective wrapper
+.m79Ne.NjYhI {
+  // RESET
+
+  .dCFY6,
+  .ms-CommandBar {
+    position: unset;
+    z-index: unset;
+    height: unset !important;
+    box-sizing: unset;
+    padding: unset;
+    background: unset !important;
+    border: none !important;
+  }
+
+  // inner wrapper
+  .dCFY6 {
+    padding: 0 3px 0 14px;
+  }
+
+  // Hide doc type & title
+  .mFY1I.fafVC,
+  ._ILzI {
+    display: none;
+  }
+
+  // "More" btn
+  #CommandBarOverflowButton {
+    max-width: 34px !important;
+    min-width: 34px !important;
+  }
+
+  // secondary command bar
+  .ms-OverflowSet.ms-CommandBar-secondaryCommand {
+    .ms-OverflowSet-item {
+      button {
+        min-width: unset !important;
+        max-width: unset !important;
+        height: unset !important;
+        margin: unset !important;
+        background-color: unset !important;
+
+        border: none !important;
+
+        span {
+          width: fit-content;
+          i {
+            height: 100% !important;
+            font-size: 32px !important;
+            line-height: unset !important;
+          }
+        }
+      }
+    }
+
+    button[title='Show email'] {
+      display: none;
+    }
+  }
+}

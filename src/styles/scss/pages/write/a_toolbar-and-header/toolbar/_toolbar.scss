@@ -1,0 +1,37 @@
+@use '../../../../_abstracts/' as *;
+@use '../../vars-write' as *;
+
+// Toolbar
+.dMm6A.AiSsJ > .vBoqL {
+  height: unset;
+  padding: 8px 12px !important;
+  // border-bottom: 2px solid $user-text-color;
+
+  > [data-testid="ComposeSendButton"] // "Send" button
+  {
+    > button,
+    i {
+      color: var(--colorNeutralForegroundOnBrand); // Outlook default
+    }
+
+    > button:last-of-type > span // chevron
+    {
+      width: fit-content;
+      height: fit-content;
+    }
+  }
+
+  > .ocwZc // "Trash" and "Open in new window" buttons
+  {
+    > button {
+      max-width: unset !important;
+      color: $user-text-color !important;
+      border: 2px solid $user-text-color !important;
+      @include onhover--set-border-color;
+    }
+
+    > button:first-of-type {
+      margin-right: 18px;
+    }
+  }
+}

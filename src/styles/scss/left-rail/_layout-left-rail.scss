@@ -1,0 +1,11 @@
+@use '../_abstracts/injected-elements' as *;
+@use '../_abstracts/borders' as *;
+@use '../_abstracts/colors' as *;
+
+div#LeftRail {
+  // display: none;
+  margin-left: $custom_menu-left-width;
+  padding: 0 10px;
+  background-color: $user-bg;
+  border: $user-border-md solid var(--black);
+}

@@ -1,0 +1,38 @@
+#owaBranding_container {
+  display: none !important;
+}
+
+// "All folders" button - effective wrapper
+#searchScopeButtonId {
+  font-size: 32px !important;
+  font-weight: 600;
+
+  &:focus::after {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+// "All folders" button
+#searchScopeButtonId-option {
+  padding: 0 28px 0 8px;
+  min-width: 250px;
+  max-width: 250px;
+  height: 100%;
+  line-height: 40px;
+  background: var(--white);
+  border: none;
+  border-right: 4px solid var(--black);
+  border-radius: 0;
+}
+
+// Chevron
+span.ms-Dropdown-caretDownWrapper {
+  top: 8px;
+  right: 18px;
+
+  i {
+    font-size: 24px;
+    font-weight: 900;
+  }
+}

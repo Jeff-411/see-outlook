@@ -1,0 +1,17 @@
+@use './colors' as *;
+
+// TRIGGERS ===============================================
+// Size
+$custom_menu-top-height: 20px;
+$custom_menu-left-width: 10px;
+
+// Triggers - Top
+$custom_ribbon-color: $color-1;
+// $custom_ribbon-color: lime;
+$custom_site-header-color: $color-4;
+
+// Triggers - Left
+$trigger-navpane-color: $color-4;
+$trigger-navpane-color: lime;
+$trigger-leftRail-color: $color-1;
+$trigger-leftRail-color: var(--black);

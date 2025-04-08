@@ -1,0 +1,23 @@
+@use '../../../_abstracts/' as *;
+@use '../vars-write' as *;
+
+.dMm6A.AiSsJ > :nth-child(2), // toolbar
+.dMm6A.AiSsJ > :nth-child(3) // header (recipients and subject)
+{
+  * // fonts
+  {
+    font-size: $user-fs-sm !important;
+    font-weight: $user-fw;
+  }
+
+  * // color
+  {
+    color: $user-text-color;
+  }
+
+  span.fui-Button__icon // icons
+  {
+    width: $user-fs-sm;
+    height: $user-fs-sm;
+  }
+}

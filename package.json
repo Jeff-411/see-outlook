@@ -1,0 +1,29 @@
+{
+  "name": "see-outlook",
+  "description": "Chrome Manifest V3 browser extension enhancing Outlook's web interface for low vision users.",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "zip": "node zipFile.js",
+    "sass": "sass --watch src/styles/scss/main.scss dist/custom.css --no-source-map --style=compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "copy-webpack-plugin": "^13.0.0",
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.83.4",
+    "sass-loader": "^16.0.4",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16"
+  }
+}

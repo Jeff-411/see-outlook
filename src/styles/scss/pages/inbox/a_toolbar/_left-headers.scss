@@ -1,0 +1,40 @@
+@use '../../../_abstracts/' as *;
+
+// Inbox page toolbar - headers
+.XW2m0.LyMTI:not(.c_ifE) > .bkYAr > div > ._EhYJ {
+  // Selection enabled
+  > .ZYym6.uNaZF.m74HI.rf8FT {
+    @include checkbox;
+    & {
+      background-color: $color-4;
+    }
+  }
+
+  > [role='heading'] {
+    @include checkbox-heading;
+  }
+
+  // Selection disabled
+  > .IG8s8[role='heading'] {
+    // title
+    > span {
+      margin: 0 10px !important;
+      font-size: $user-fs-md;
+      color: var(--black);
+    }
+
+    // star
+    .fui-Button__icon {
+      width: fit-content !important;
+      height: fit-content !important;
+
+      * {
+        width: fit-content !important;
+        height: fit-content !important;
+      }
+      i.fui-Icon-font {
+        font-size: $user-fs-sm !important;
+      }
+    }
+  }
+}

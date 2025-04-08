@@ -1,0 +1,20 @@
+.ms-Callout-main:has([title='Search in']) > .YljlO {
+  width: 600px;
+
+  // Left-side labels - width
+  label {
+    width: fit-content;
+  }
+
+  // Attachments
+  .W09lj {
+    label.ms-Checkbox-label {
+      width: fit-content;
+
+      > div {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

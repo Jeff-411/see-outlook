@@ -1,0 +1,12 @@
+@use '../fonts' as *;
+
+// Outlook default values
+$O365_HeaderLeftRegion-default-width: 40px;
+$scrollbars-default-width: 30px;
+
+// listbox container
+// $search-callout-max-width: calc(100vw - $O365_HeaderLeftRegion-default-width - $search-icon-size);
+$search-callout-max-width: 100vw;
+
+// listbox container - listbox
+$search-callout-listbox-max-width: calc($search-callout-max-width - $scrollbars-default-width);

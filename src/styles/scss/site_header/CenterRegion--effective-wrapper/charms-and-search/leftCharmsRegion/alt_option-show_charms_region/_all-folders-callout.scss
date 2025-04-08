@@ -1,0 +1,71 @@
+// ============================================================================
+// SEARCH > 'ALL' BTN => DROPDOWN LIST OF SEARCHABLE FOLDERS
+//
+//    1. Search-box: _onClick_   => displays 'All' btn, then
+//
+//    2. 'All' btn: _onClick_    => dropdown list of folders
+//
+// ============================================================================
+
+// Outer wrapper
+.ms-Callout.ms-Dropdown-callout:has(#searchScopeButtonId-list) {
+  width: unset;
+  max-height: 80vh;
+
+  .ms-Callout-main {
+    overflow-y: auto !important;
+  }
+
+  // Inner wrapper
+  #searchScopeButtonId-list {
+    padding: 0 0 8px;
+
+    // Unset
+    * {
+      height: unset;
+      margin: unset;
+      padding: unset;
+      border: none;
+      border-radius: 0;
+    }
+
+    // ========================================================================
+    // MENU ITEM - Text Content
+    span {
+      line-height: 2;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    // ========================================================================
+    // MENU ITEM - Wrappers
+
+    // 1. All menu items
+    button {
+      padding-left: 16px;
+      padding-right: 16px;
+
+      &:hover {
+        background: var(--white);
+        border-top: 3px solid $color-1;
+        border-bottom: 3px solid $color-1;
+      }
+    }
+
+    // 2. First menu item
+    > button:first-child {
+      background-color: var(--white);
+      border-bottom: 2px solid var(--neutralLighter);
+
+      &:hover {
+        border-top: none;
+      }
+
+      // text content
+      span {
+        font-weight: 400;
+      }
+    }
+  }
+}

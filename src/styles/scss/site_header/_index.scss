@@ -1,0 +1,13 @@
+// index: Site Header
+// Add a show/hide toggle to the Site Header.
+
+// Toggle
+@forward './layout-site-header';
+
+// Content
+@forward './O365_HeaderLeftRegion/';
+@forward './CenterRegion--effective-wrapper/';
+@forward './O365_HeaderRightRegion/';
+
+// Debug
+// @forward './disable-toggle';

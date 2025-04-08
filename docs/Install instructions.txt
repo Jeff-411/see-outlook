@@ -1,0 +1,43 @@
+# See Outlook browser extension
+
+See Outlook is an accessibility extension for Chrome-based browsers. It customizes Outlook's web interface for low vision users.
+
+This See Outlook extension is distributed as a ZIP archive. Once unzipped, the contents of the archive are intended to be sideloaded into the browser. Instructions on how to sideload and update this extension are provided below.
+
+## Sideload Installation Instructions
+
+1. Extract this ZIP file to a permanent location on your computer
+   (Choose a location you won't accidentally delete later)
+
+2. Open your Chrome-based browser (Chrome, Edge, Brave, Vivaldi, etc.)
+
+3. Access the Extensions page:
+   - Chrome, Brave, Vivaldi, etc.
+      - Type "<browser name>://extensions" in the address bar
+   - Edge: Click the menu (- - - ) > Extensions
+
+4. Enable "Developer Mode" by toggling the switch in the top-right corner
+
+5. Click the "Load unpacked" button
+
+6. Navigate to and select the extracted extension folder (the folder containing the manifest.json file)
+
+7. The "See Outlook" extension should now appear in your extensions list
+
+8. Visit https://outlook.live.com/ to see the extension in action
+
+## Important Notes
+
+- When you restart your browser, you may see a warning about using developer mode extensions. 
+  Click "Cancel" to keep the extension enabled.
+
+- This extension only works on https://outlook.live.com/ as specified in the manifest.
+
+## Updating the Extension
+
+If you receive an updated version of this extension:
+
+1. Extract the new version to the same location, replacing the old files
+2. Go to the extensions page in your browser
+3. Find "See Outlook" and click the "Reload" icon (circular arrow)
+4. Reload the Outlook page in your browser

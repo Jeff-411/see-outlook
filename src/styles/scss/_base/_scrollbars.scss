@@ -1,0 +1,35 @@
+@use '../_abstracts/' as *;
+
+$scrollbar-width: 20px;
+$scrollbar-height: 20px;
+
+$track-color: var(--neutralTertiarySurface);
+$track-hover-color: black;
+
+$thumb-border-width: 3px;
+$thumb-color-page: $color-1;
+$thumb-color-alt: $color-2;
+
+$border-radius: 100vw; // Outlook default
+
+::-webkit-scrollbar {
+  width: #{$scrollbar-width} !important;
+  height: #{$scrollbar-height} !important;
+}
+::-webkit-scrollbar-track {
+  background: $track-color !important;
+  &:hover {
+    background: $track-hover-color !important;
+  }
+}
+::-webkit-scrollbar-thumb {
+  background: $thumb-color-page !important;
+  border: #{$thumb-border-width} solid $track-color !important;
+  border-radius: $border-radius !important;
+  &:hover {
+    border-color: $thumb-color-page !important;
+  }
+}
+// ::-webkit-scrollbar-button {
+//   height: 50px !important;
+// }

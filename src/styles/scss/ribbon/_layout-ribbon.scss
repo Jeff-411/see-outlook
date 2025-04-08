@@ -1,0 +1,13 @@
+@use '../_abstracts/' as *;
+
+[aria-label='Ribbon'] {
+  position: relative !important;
+  margin-left: $custom_menu-left-width !important;
+  z-index: 1 !important;
+  background-color: $user-bg;
+
+  // Wrapper for "Show/Hide navigation pane" buttons
+  // .Bt2YR {
+  //   display: none;
+  // }
+}

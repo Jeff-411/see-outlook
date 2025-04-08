@@ -1,0 +1,21 @@
+@use '../../../../_abstracts/' as *;
+
+// write page header - outer borders
+.dMm6A.AiSsJ > .QFieH.J8sYv {
+  // ADD 4 BORDERS
+  > :nth-child(1), // recipients
+  > :nth-child(2) // subject
+  {
+    border: 2px solid $user-text-color;
+  }
+
+  // HIDE 1 BORDER
+  > :nth-child(1) // recipients
+  {
+    border-bottom: none;
+  }
+  > :nth-child(2) // subject
+  {
+    border-top: none;
+  }
+}

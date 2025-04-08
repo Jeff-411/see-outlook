@@ -1,0 +1,16 @@
+@use '../../../_abstracts/' as *;
+
+// colors
+$context-menu-accent-color: $color-1;
+$context-menu-bg: $user-bg;
+$context-menu-text-color: $user-text-color;
+$context-menu-separator-color: gray;
+
+// fonts
+$context-menu-fs-md: $user-fs-md;
+$context-menu-fs-sm: $user-fs-sm;
+$context-menu-fw: $user-fw;
+
+// border size
+$context-menu-bd-width: $user-border-md;
+$context-menu-bd-color: $context-menu-accent-color;

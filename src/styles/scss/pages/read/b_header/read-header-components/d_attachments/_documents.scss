@@ -1,0 +1,86 @@
+// Read page - attachments - documents
+
+@use '../../../../../_abstracts/' as *;
+
+.E_kRz.srnS5 {
+  *:not(i) {
+    width: unset;
+    min-width: unset;
+    max-width: unset;
+    box-sizing: border-box;
+  }
+  // each attachment (Y0d3P)
+  > div {
+    display: block;
+    overflow: unset;
+    margin: var(--page-2) var(--page-20) var(--page-10) var(--page-2);
+
+    // inner wrapper ( triggers hover ) (GpKSR C1V5C WM3Zr ERPBZ bK9dl)
+    > div {
+      height: fit-content;
+      // padding: var(--page-20) var(--page-30) var(--page-20) 0;
+      border-width: var(--read-atach-bdr-width);
+      border-color: var(--read-atach-bdr-color);
+
+      &:hover {
+        background-color: transparent;
+        border-color: $color-1;
+
+        * {
+          background-color: transparent;
+        }
+      }
+
+      // outer content wrapper ([draggable="true"])
+      > div {
+        // inner content wrapper (.feh0T)
+        > div {
+          // file icon | file title | file size (.JA9Uf.YyULm)
+          > :nth-child(1) {
+            // file icon (.WwCcl) (> :nth-child(1))
+            // > i // _{margin: var(--read-atach-icon-my) var(--page-10);}
+
+            // file title & size - outer wrapper (.uDIro)
+            > div:nth-child(2) {
+              height: var(--read-atach-title-height);
+              padding: 0;
+
+              // file title & size - inner wrapper (no attributes)
+              > div {
+                // file title (.VlyYV.PQeLQ.QEiYT) (overflow hidden)
+                > :first-child {
+                  // max-width: 90%;
+                  max-width: 60vw;
+
+                  font-size: var(--read-atach-title-size);
+                  font-weight: var(--read-atach-title-weight);
+                }
+
+                // file size ( remove )
+                > :last-child {
+                  display: none;
+                }
+              }
+            }
+          }
+
+          // chevron btn
+          > :nth-child(2) {
+            position: relative;
+            height: var(--read-atach-title-size);
+            margin: 0 14px;
+            background-color: #ff0;
+            border: 2px solid black;
+            border-radius: 4px;
+
+            i {
+              font-size: var(--read-atach-title-size);
+              color: black;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}

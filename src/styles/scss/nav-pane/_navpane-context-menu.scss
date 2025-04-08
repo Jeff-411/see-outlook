@@ -1,0 +1,25 @@
+@use '../_abstracts/' as *;
+
+// div.ms-ContextualMenu:not(:has([name='Advanced actions'])) {
+div.ms-ContextualMenu {
+  // menu
+  ul:has([name='Remove from Favorites']) {
+    li[role='presentation'] {
+      > button.is-disabled .ms-ContextualMenu-itemText {
+        color: var(--neutralTertiary);
+      }
+    }
+
+    > :nth-child(1) {
+      // number of items in folder | number unread items
+      .ms-ContextualMenu-itemText {
+        color: $color-4 !important;
+      }
+    }
+
+    > :nth-last-child(2) {
+      // last separator
+      margin: 0 0 4px !important;
+    }
+  }
+}

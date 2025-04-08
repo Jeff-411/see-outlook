@@ -1,0 +1,8 @@
+#searchBoxColumnContainerId {
+  > div {
+    border-radius: 0;
+    > div {
+      border-radius: 0;
+    }
+  }
+}

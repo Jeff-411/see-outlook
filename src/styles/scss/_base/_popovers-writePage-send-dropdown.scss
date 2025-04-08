@@ -1,0 +1,20 @@
+@use '../_abstracts/' as *;
+
+.fui-MenuPopover {
+  font-size: $user-fs-sm;
+  font-weight: $user-fw;
+  border: 2px solid $color-1;
+
+  > [role='menu'] {
+    padding-top: 10px;
+    padding-bottom: 12px;
+
+    > [role='menuitem'] {
+      padding: 10px;
+      font-size: 32px;
+      font-weight: 600;
+      border-bottom: 2px solid transparent;
+      border-radius: 0;
+    }
+  }
+}

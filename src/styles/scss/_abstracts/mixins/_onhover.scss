@@ -1,0 +1,137 @@
+@use '../colors' as *;
+@use '../borders' as *;
+
+@mixin onhover--fade-background($opacity: 0.5) {
+  &:hover {
+    opacity: $opacity;
+  }
+}
+
+@mixin onhover--set-background($color: $color-3) {
+  &:hover {
+    background-color: $color !important;
+  }
+}
+
+@mixin onhover--set-border-color($hover-color: $color-1, $set-background: true) {
+  &:hover {
+    @if $set-background {
+      background-color: $user-bg !important;
+    }
+    border-color: $hover-color !important;
+
+    * {
+      @if $set-background {
+        background-color: $user-bg !important;
+      }
+    }
+  }
+}
+
+/** 
+ *  PARAMS: 
+ *    - $hover-color: $color-1, 
+ *    - $border-width: $user-border-md, 
+ *    - $set-background: true
+ *
+ *  BORDERS:
+ *  This mixin adds top and bottom borders to the element and
+ *  sets their color to `transparent`. On hover, it resets the 
+    border color to $hover-color.
+ *  
+ *  BACKGROUND:
+ *  The `background-color:` is reset by default and its value
+ *  is user-defined (`$user-bg`). To ensure $user-bg overrides 
+ *  any hover values set by Outlook, the override is applied to  
+ *  the element and all its sub-elements. To use Outlooks's 
+ *  default values, add "false" when including the mixin.
+ */
+@mixin onhover--addHoverBorders-horizontal(
+  $hover-color: $color-1,
+  $border-width: $user-border-md,
+  $set-background: true
+) {
+  // Reset borders
+  border: none !important;
+  border-radius: 0 !important;
+
+  // Add horizontal borders
+  border-top-style: solid !important;
+  border-bottom-style: solid !important;
+
+  // Style horizontal borders
+  border-width: $border-width !important;
+  border-color: transparent !important;
+
+  &:hover {
+    @if $set-background {
+      background-color: $user-bg;
+    }
+    border-color: $hover-color !important;
+
+    * {
+      @if $set-background {
+        background-color: $user-bg;
+      }
+    }
+  }
+}
+
+@mixin onhover-colors--bd-bg-el(
+  $border-color,
+  $background-color: $user-bg,
+  $element-color: null,
+  $apply-to-element: false
+) {
+  &:hover {
+    background-color: $background-color !important;
+    border-color: $border-color !important;
+
+    * {
+      background-color: $background-color !important;
+    }
+
+    @if $apply-to-element {
+      & {
+        color: if($element-color, $element-color, $border-color) !important;
+      }
+    }
+  }
+}
+// NOT USED ===================================================================
+
+// @mixin add-hover-border(
+//   $hover-color: $color-1,
+//   $border-width: $user-border-md,
+//   $set-background: true
+// ) {
+//   // Reset borders
+//   border: none !important;
+
+//   // Add a transparent border
+//   border: $border-width solid transparent;
+
+//   &:hover {
+//     @if $set-background {
+//       background-color: $user-bg !important;
+//     }
+//     border-color: $hover-color !important;
+
+//     * {
+//       @if $set-background {
+//         background-color: $user-bg !important;
+//       }
+//     }
+//   }
+// }
+
+// @mixin onhover--border-color($border-color: $color-1, $bg-color: $user-bg) {
+//   &:hover {
+//     background-color: $bg-color !important;
+//     border-color: $border-color !important;
+
+//     * {
+//       background-color: $bg-color !important;
+//     }
+//   }
+// }

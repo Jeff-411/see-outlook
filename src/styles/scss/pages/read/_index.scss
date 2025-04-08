@@ -1,0 +1,11 @@
+// IMPORTANT ================================================
+//    The "Conversation view" option in "Outlook > Settings"
+//    MUST be set to OFF!
+// ==========================================================
+
+// index: Read page
+@forward './layout';
+@forward './a_toolbar-n-title/';
+@forward './b_header/';
+@forward './c_body/read-message-body';
+@forward './d_footer/read-footer';

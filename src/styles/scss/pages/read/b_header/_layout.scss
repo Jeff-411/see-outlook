@@ -1,0 +1,5 @@
+@use '../../../_abstracts/mixins' as *;
+
+.uSg02 {
+  @include reset-margin-padding;
+}

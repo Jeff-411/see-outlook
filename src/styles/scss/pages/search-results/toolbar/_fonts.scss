@@ -1,0 +1,15 @@
+@use '../../../_abstracts/fonts' as *;
+
+// search-results page - toolbar - fonts
+.XW2m0.LyMTI:not(.c_ifE) > .bkYAr > .rEzfP.uNaZF.Gj2Pr.MtQpS.m74HI.e2Pgo.rf8FT > ._EhYJ.fcAA5 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+
+  > :nth-child(2) .ms-Pivot-text, // header
+  > .x12Be i:not(.fui-Icon-font), // regular filters button - icon
+  > .x12Be .ms-Button-label // regular filters button - text
+  {
+    font-size: $user-fs-sm;
+    font-weight: $user-fw;
+    color: var(--black);
+  }
+}

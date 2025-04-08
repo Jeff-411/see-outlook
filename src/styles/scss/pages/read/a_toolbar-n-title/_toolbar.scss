@@ -1,0 +1,37 @@
+@use '../../../_abstracts/' as *;
+@use '../vars-read' as *;
+
+// Read page toolbar: Close | Previous | Next
+.xpAva {
+  // inner wrapper
+  .DVqXU {
+    padding-left: 8px !important;
+    padding-right: 6px !important;
+
+    * {
+      font-size: $user-fs-md !important;
+      font-weight: 900;
+    }
+
+    button {
+      border: 2px solid red;
+      border-radius: 6px;
+      width: $read-row-height;
+      height: $read-row-height;
+      &:hover {
+        border-color: black;
+        background-color: lime;
+      }
+    }
+
+    [title='Close'] i {
+      color: black;
+      border: none;
+    }
+
+    [aria-label='Open the previous item'] {
+      margin-left: 12px !important;
+      margin-right: 12px !important;
+    }
+  }
+}

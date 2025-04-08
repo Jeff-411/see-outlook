@@ -1,0 +1,6 @@
+@use '../../../_abstracts/mixins' as *;
+
+// wrapper - Toolbar and Title
+.sD_4q {
+  @include reset-margin-padding;
+}

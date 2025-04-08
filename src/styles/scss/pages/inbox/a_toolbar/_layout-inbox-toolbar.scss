@@ -1,0 +1,15 @@
+@use '../../../_abstracts/mixins' as *;
+
+// Layout - Inbox toolbar
+.XW2m0.LyMTI:not(.c_ifE) > .bkYAr {
+  // The `:not(.c_ifE)` selector is used to distinguish between:
+  //    1. the Inbox page on the one hand, and
+  //    2. the Read and Write pages on the other.
+
+  width: 100%;
+  @include reset-margin-padding;
+
+  & {
+    display: flex !important;
+  }
+}

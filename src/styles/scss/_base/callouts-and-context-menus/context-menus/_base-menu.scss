@@ -1,0 +1,48 @@
+@use './vars-context-menus' as *;
+
+// base menu
+div.ms-ContextualMenu // ul wrapper
+{
+  width: fit-content;
+  padding: 8px 8px 8px 16px;
+  max-height: 100%;
+
+  * // layout | fonts | background
+  {
+    box-sizing: border-box;
+    max-width: unset;
+    height: fit-content;
+    padding: 0;
+    font-size: $context-menu-fs-md;
+    font-weight: $context-menu-fw;
+    background-color: $context-menu-bg;
+  }
+
+  *:not(i) // font-family
+  {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  i // icon margins
+  {
+    margin: 0 8px;
+  }
+
+  li[role='separator'], // separator - main menu
+  div.JhKhl // separator - submenus
+  {
+    height: 4px;
+    // margin: 18px 0 0px;
+    background-color: $context-menu-separator-color;
+  }
+
+  // TEXT COLOR
+  * {
+    color: $context-menu-text-color;
+  }
+
+  button.is-disabled .ms-ContextualMenu-itemText  // disabled buttons
+  {
+    color: var(--neutralTertiary); // Outlook default
+  }
+}

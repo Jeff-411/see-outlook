@@ -1,0 +1,38 @@
+@use '../_vars-search/' as *;
+
+#searchBoxId-Mail {
+  // ICONS
+  i {
+    height: $search-icon-size;
+    padding: 0;
+    font-size: $search-icon-size;
+    font-weight: 900;
+  }
+
+  // ICON WRAPPERS
+  // Style all
+  div:has([data-icon-name='SearchRegular']),
+  button {
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+  }
+
+  // Hide all
+  > div:has([data-icon-name='SearchRegular']),
+  button {
+    visibility: hidden;
+  }
+
+  // Show selected
+  [aria-label='Exit search'],
+  #filtersButtonId {
+    visibility: visible;
+  }
+}
+
+// Remove: search button that's created when the user clicks in the search box
+#searchBoxId-Mail + button {
+  display: none;
+}

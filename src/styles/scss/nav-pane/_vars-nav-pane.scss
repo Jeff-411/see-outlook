@@ -1,0 +1,51 @@
+// Navigation pane variables
+@use '../_abstracts/' as *;
+
+@mixin navFonts {
+  font-size: $user-fs-sm;
+  font-weight: $user-fw;
+  color: $user-text-color;
+}
+
+/** 
+ *  This "info-and-actions-button" mixin styles 
+ *  the ellipsis that displays on the right side
+ *  of the menu-item when it is hovered.
+ */
+@mixin info-and-actions-button {
+  > button {
+    > span.fui-Button__icon // icon wrapper
+    {
+      > i // icon
+      {
+        width: $user-fs-sm;
+        height: $user-fs-sm;
+        font-size: $user-fs-sm;
+        color: white;
+        background-color: $color-1;
+        border: 2px solid var(--black);
+      }
+    }
+  }
+}
+
+// width of left-side custom triggers wrapper
+$trigger-width: $custom_menu-left-width;
+
+// navpane width
+$default-outlook-navpane-width: 236px;
+$navepane-width-scale: 1.6;
+
+// borders
+$navpane-border-width: $user-border-md;
+$navpane-border-color: var(--black);
+
+$navItem-border-width: $user-border-sm;
+$navItem_trigger-border-color: $color-1;
+
+// MENU-ITEM-OFFSET
+// - Case 1:  Use if hiding all icons (except the chevrons)
+$navpane-left-offset: 26px;
+
+// - Case 2: Use if showing all icons
+// $navpane-left-offset: 0;

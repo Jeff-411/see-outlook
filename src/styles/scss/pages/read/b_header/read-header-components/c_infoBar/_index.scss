@@ -1,0 +1,23 @@
+// index:  Read page header > infoBar
+.uSg02 > .GWtSs.PWXlC.infoBarDivClass {
+  margin-top: 20px !important;
+
+  // .fui-MessageBarGroup
+  > .fui-MessageBarGroup {
+    padding-bottom: 10px !important;
+
+    > .fui-MessageBar {
+      padding: 10px !important;
+
+      > .fui-MessageBar__icon {
+        display: none;
+      }
+
+      // > .fui-MessageBarBody {} // NO MODIFICATIONS
+
+      > .fui-MessageBarActions button {
+        padding: 8px 10px !important;
+      }
+    }
+  }
+}

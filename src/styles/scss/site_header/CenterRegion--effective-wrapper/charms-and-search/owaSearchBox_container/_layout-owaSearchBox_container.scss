@@ -1,0 +1,29 @@
+// layout - #owaSearchBox_container
+
+@use './_vars-search/' as *;
+
+#owaSearchBox_container {
+  margin-left: $search-icon-size;
+
+  // effective content wrapper
+  #owaSearchBox {
+    // initial | clicked
+    > .x8k1J.b_3A1,
+    > .x8k1J.kDnI3.b_3A1 {
+      max-width: 500px !important;
+      width: 100% !important;
+      height: 100%;
+      margin-right: 0 !important;
+    }
+
+    // placeholder
+    #searchBoxColumnContainerId {
+      visibility: visible;
+
+      // placeholder
+      #searchBoxId-Mail {
+        visibility: visible;
+      }
+    }
+  }
+}

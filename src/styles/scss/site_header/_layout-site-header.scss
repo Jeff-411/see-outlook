@@ -1,0 +1,25 @@
+@use '../_abstracts/injected-elements' as *;
+@use './vars-site-header' as *;
+
+#o365header // outer wrapper
+{
+  box-sizing: content-box;
+  margin-left: $custom_menu-left-width;
+  padding: $py 0;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  // &:hover {
+  //   margin-top: initial;
+  //   border-top: $border-width solid $border-color;
+  // }
+}
+
+#O365_NavHeader // inner wrapper
+{
+  height: calc($base-height + $O365_NavHeader-border-width) !important;
+  align-items: center;
+  border-bottom: $O365_NavHeader-border-width solid var(--black);
+}

@@ -1,0 +1,20 @@
+@use './vars-site-header-right' as *;
+
+@forward './first_child__current_account/';
+@forward './last_child__other_accounts/';
+@forward './fonts/';
+
+// layout
+#mectrl_main_body {
+  inset: 48px auto auto -591px !important;
+  width: 650px;
+  height: calc(100vh - ($border-width * 2 + $header-content-height));
+  margin-top: $border-width;
+  background-color: var(--white);
+  border: var(--callout-bd-width) solid var(--callout-bd-color);
+
+  // inner wrapper
+  .mectrl_body {
+    padding: 0 20px;
+  }
+}

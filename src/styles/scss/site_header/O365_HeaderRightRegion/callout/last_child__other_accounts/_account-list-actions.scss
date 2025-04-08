@@ -1,0 +1,67 @@
+//
+// NOTE: THE ACCOUNT ACTIONS BELOW ARE DISABLED
+// You can uncomment out the code below to enable Account Actions.
+// However, the contents are only about half-baked and will require
+// some serious tweaking.
+
+// #mectrl_main_body .mectrl_menu.mectrl_accountActions {
+//   // Style the wrapper
+//   width: 32px;
+//   height: 32px;
+//   background-color: gainsboro;
+//   border: 2px solid var(--black);
+
+//   // Create a tooltip for the visible trigger button
+//   > button.mectrl_resetStyle.mectrl_trigger[aria-label] {
+//     position: relative;
+
+//     &::before {
+//       content: attr(aria-label);
+//       position: absolute;
+//       top: -20px;
+//       right: -3px;
+//       width: 520px;
+//       padding: 0 0 6px 0;
+//       background-color: var(--white);
+//       color: var(--black);
+//       text-align: center;
+//       border: 2px solid red;
+//       font-size: 32px;
+//       white-space: break-spaces;
+//       opacity: 0;
+//       visibility: hidden;
+//       transition: opacity 0.3s, visibility 0.3s;
+//     }
+
+//     &:hover::before {
+//       opacity: 1;
+//       visibility: visible;
+//     }
+//   }
+
+//   > ul {
+//     inset: -15px auto auto -524px !important;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     // top: -20px;
+//     // right: -13px;
+//     max-width: unset;
+//     width: 562px;
+//     height: 100px;
+//     border: 2px solid #000 !important;
+
+//     > li {
+//       padding-bottom: unset;
+//       border-bottom: none;
+
+//       button {
+//         height: fit-content;
+//         padding: 0 0 10px;
+//         color: var(--black);
+//         text-align: center;
+//         font-size: 32px;
+//       }
+//     }
+//   }
+// }

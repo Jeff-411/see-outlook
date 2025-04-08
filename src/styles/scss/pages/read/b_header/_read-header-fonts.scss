@@ -1,0 +1,21 @@
+@use '../../../_abstracts/' as *;
+@use '../vars-read' as *;
+
+.uSg02 {
+  @mixin read-hdr-fonts {
+    font-size: $user-fs-md;
+    font-weight: $user-fw;
+    line-height: $read-row-height;
+    color: var(--black);
+  }
+
+  // sender name |  recipients & date | info bar
+  .OZZZK,
+  .DrnCK.l8Tnu,
+  .GWtSs.PWXlC.infoBarDivClass {
+    @include read-hdr-fonts;
+    * {
+      @include read-hdr-fonts;
+    }
+  }
+}

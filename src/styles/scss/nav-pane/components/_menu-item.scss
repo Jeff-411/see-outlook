@@ -1,0 +1,32 @@
+@use '../vars-nav-pane' as *;
+
+.Yd48r:has(.kTUsm.a7Ps_) {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  * {
+    background-color: var(--white);
+    @include navFonts; // font-size | font-weight | color
+  }
+
+  /**wrapper for regular menu-items 
+   *  all menu-items, except those in the "Groups" section
+   */
+  [draggable='true'] {
+    margin-bottom: 8px;
+  }
+
+  // menu-item
+  [draggable='true'] > div, // regular menu-item
+  div:has([title='Groups']) + div span.gtcPn._8g73.LPIso // "Groups" menu-item
+  {
+    margin-left: $navpane-left-offset;
+
+    /** info-and-actions-button
+      *  i.e. the ellipsis that displays on the right side
+      *  when the menu-item is hovered
+      */
+    > span.qarSX.knMrU {
+      @include info-and-actions-button;
+    }
+  }
+}

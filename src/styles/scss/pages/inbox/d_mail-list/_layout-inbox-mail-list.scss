@@ -1,0 +1,32 @@
+@use '../../../_abstracts/' as *;
+
+// Top level layout
+#MailList .customScrollBar.jEpCF.R29xW {
+  box-sizing: border-box;
+  @include reset-margin-padding;
+
+  // effective message wrapper
+  .EeHm8 > div {
+    outline: none !important;
+
+    /** 
+     *  PARAMS: 
+     *    - $hover-color: $color-1, 
+     *    - $border-width: $user-border-md, 
+     *    - $set-background: true
+     *
+     *  BORDERS:
+     *  This mixin adds top and bottom borders to the element and
+     *  sets their color to `transparent`. On hover, it resets the 
+         border color to $hover-color.
+     *  
+     *  BACKGROUND:
+     *  The `background-color:` is reset by default and its value
+     *  is user-defined (`$user-bg`). To ensure $user-bg overrides 
+     *  any hover values set by Outlook, the override is applied to  
+     *  the element and all its sub-elements. To use Outlooks's 
+     *  default values, add "false" when including the mixin.
+     */
+    @include onhover--addHoverBorders-horizontal;
+  }
+}

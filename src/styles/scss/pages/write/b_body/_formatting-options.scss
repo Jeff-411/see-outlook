@@ -1,0 +1,67 @@
+@use '../../../_abstracts/' as *;
+
+// Inline formatter (triggered by selecting text in message body)
+div.ms-Callout-main div[aria-label='Formatting options.'] {
+  width: min-content;
+  padding-right: var(--page-8) !important;
+
+  // all button wrappers
+  > div._1ft89H9HN2dsqxzs7mRQlA {
+    width: min-content;
+    border: var(--page-1) solid var(--black);
+    margin: var(--page-4) var(--page-4) var(--page-6);
+    padding: var(--page-6);
+
+    &:hover {
+      background-color: $color-3;
+      * {
+        background-color: $color-3;
+      }
+    }
+  }
+
+  // REMOVE: "Font size" wrapper
+  > div:nth-child(2) {
+    display: none;
+  }
+
+  // // all btns
+  // button:hover {
+  //   background-color: $color-3;
+  // }
+
+  // icon btns
+  button._1ydZr2wordaZCVjvq72bCL {
+    width: fit-content;
+    height: fit-content;
+
+    // icon
+    div._J9TgidbCA7BY6E64vSXE {
+      width: var(--page-68);
+    }
+  }
+
+  // chevron
+  button.fhx7vFU2wq1hXTt358UUM {
+    top: calc(var(--page-20) * -1);
+    width: fit-content;
+
+    i {
+      height: var(--page-24);
+      margin: 0;
+      font-size: var(--page-24);
+      line-height: var(--page-24);
+      font-weight: 900;
+    }
+  }
+
+  // Highlight & Text color btns - current color
+  div._3hASHHFVj8M5o-OvECqC8h {
+    position: absolute;
+    top: var(--page-16);
+    left: var(--page-5) !important;
+    width: var(--page-20);
+    height: var(--page-20);
+    z-index: 1;
+  }
+}

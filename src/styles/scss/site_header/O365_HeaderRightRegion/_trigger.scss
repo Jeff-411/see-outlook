@@ -1,0 +1,22 @@
+@use '../../_abstracts/' as *;
+
+#O365_HeaderRightRegion {
+  $btn-size: 44px;
+
+  // Button before click
+  #O365_MainLink_MePhoto,
+  .ohcfXYh6LUBy5DS5kNUjRQ\=\=,
+  // Button after click
+  #mectrl_headerPicture {
+    width: $btn-size !important;
+    height: $btn-size !important;
+  }
+
+  #meInitialsButton,
+  #mectrl_headerPicture {
+    font-size: 20px !important;
+    font-weight: 600;
+    color: var(--white);
+    background-color: $color-1 !important;
+  }
+}

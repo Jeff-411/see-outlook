@@ -1,0 +1,51 @@
+@use '../../../_abstracts/' as *;
+
+// Write page - suggested contacts
+div.ms-Callout-main:has(#FloatingSuggestionsList) {
+  @include suggestionCallouts-base;
+  @include suggestionCallouts-title;
+  @include suggestionCallouts-menu-item;
+  @include suggestionCallouts-persona;
+  @include suggestionCallouts-persona-selected;
+  @include suggestionCallouts-closeButton;
+
+  /**
+   *  footer: "Search People" | "Top n results"
+   */
+  .ms-Suggestions-footerContainer {
+    padding: 0 4px;
+    border-bottom: 1px solid black;
+
+    > li {
+      border-top: 2px solid $user-text-color;
+    }
+
+    /**
+     *  li containg the "Search People" button
+     */
+    > li:has(.MIV76.j7as6.DKnkd) {
+      @include onhover--addHoverBorders-horizontal($color-4);
+    }
+
+    button {
+      height: 60px;
+
+      /**
+       *  icon wrapper | icon
+       */
+      .USVGj {
+        width: fit-content;
+        i {
+          height: $user-fs-md;
+          line-height: $user-fs-md;
+        }
+      }
+
+      i,
+        .MIV76.j7as6.DKnkd // text
+      {
+        color: $color-4 !important;
+      }
+    }
+  }
+}

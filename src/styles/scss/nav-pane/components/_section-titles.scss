@@ -1,0 +1,11 @@
+@use '../vars-nav-pane' as *;
+
+// open navpane - section headers: Favorites | Folders | Groups
+.Yd48r:has(.kTUsm.a7Ps_) {
+  .gtcPn._8g73.LPIso.qWi7V._Ptr3 {
+    margin-bottom: 4px;
+    color: #0f6cbc;
+    border-bottom: $navItem-border-width solid var(--black);
+    border-radius: 0;
+  }
+}

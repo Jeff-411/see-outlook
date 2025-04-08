@@ -1,0 +1,40 @@
+@use './vars-context-menus' as *;
+
+// base menu items
+div.ms-ContextualMenu // ul wrapper
+{
+  li[role='presentation'] .ms-ContextualMenu-linkContent, // main menu
+  div[role='menuitem'], // submenus
+  div[role='menuitemcheckbox'] // submenu - Categorize menu
+  {
+    line-height: 1.3;
+    border-top: $context-menu-bd-width solid rgba(0, 0, 0, 0);
+    border-bottom: $context-menu-bd-width solid rgba(0, 0, 0, 0);
+
+    &:hover {
+      border-color: $context-menu-bd-color;
+    }
+
+    span, // main menu
+    ._5fuzp // submenus
+    {
+      line-height: 1.3;
+    }
+  }
+
+  div[role='menuitem'], // submenus
+  div[role='menuitemcheckbox'] // submenu - Categorize menu
+  {
+    padding-left: 16px;
+  }
+
+  div[role='menuitemcheckbox'] // submenu - Categorize menu
+  {
+    border-top: transparent;
+
+    &:hover {
+      border-top-width: calc($context-menu-bd-width + 2px);
+      border-bottom-width: calc($context-menu-bd-width - 2px);
+    }
+  }
+}

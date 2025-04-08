@@ -1,0 +1,18 @@
+@use '../../../_abstracts/mixins' as *;
+
+// Sender's message ( embedded when replying to an email )
+div#divRplyFwdMsg {
+  font-size: var(--read-body-font-size) !important;
+  font-weight: var(--read-body-font-weight) !important;
+  line-height: normal;
+
+  * {
+    font-size: var(--read-body-font-size) !important;
+    font-weight: var(--read-body-font-weight) !important;
+    line-height: normal;
+  }
+}
+
+div#divRplyFwdMsg + div {
+  @include read-and-write-pages--body;
+}

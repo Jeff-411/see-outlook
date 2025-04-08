@@ -1,0 +1,40 @@
+#headerButtonsRegionId {
+  // BUTTON CONTAINERS
+  // Hide all
+  > div {
+    display: none;
+  }
+
+  // Show selected
+  #owaSettingsBtn_container {
+    display: flex;
+  }
+
+  // ICONS
+  i,
+  svg {
+    height: 40px;
+    font-size: 40px !important;
+    font-weight: 600;
+    vertical-align: middle !important;
+  }
+
+  // BUTTONS
+  #owaMeetNowButton {
+    i {
+      height: unset;
+    }
+
+    .ms-Button-textContainer {
+      height: fit-content;
+
+      .ms-Button-label {
+        height: unset;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+        vertical-align: middle !important;
+      }
+    }
+  }
+}

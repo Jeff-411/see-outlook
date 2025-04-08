@@ -1,0 +1,30 @@
+@use '../../../../../../../_abstracts/' as *;
+@use '../../../../../../../_abstracts/mixins/onhover' as *;
+@use '../../../../../../../_abstracts/mixins/suggested-contacts' as *;
+
+.ms-Callout:has(#suggestion-list) {
+  @include suggestionCallouts-base;
+  @include suggestionCallouts-title;
+  @include suggestionCallouts-menu-item;
+  @include suggestionCallouts-persona;
+  @include suggestionCallouts-persona-selected;
+  @include suggestionCallouts-closeButton;
+
+  #suggestionFooter-list {
+    > div > div {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      @include onhover--addHoverBorders-horizontal($color-4);
+    }
+
+    #sug-footer1 {
+      * {
+        color: $color-4;
+      }
+    }
+
+    #sug-footer2 * {
+      color: $user-text-color;
+    }
+  }
+}

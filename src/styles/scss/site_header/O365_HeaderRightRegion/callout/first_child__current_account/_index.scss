@@ -1,0 +1,37 @@
+@use '../vars-site-header-right' as *;
+
+#mectrl_main_body {
+  // LAYOUT
+  // account name
+  #mectrl_currentAccount_primary {
+    width: fit-content;
+    margin-top: -44px;
+  }
+
+  /** hide
+   *  - Microsoft logo
+   *  - grid spacer
+   *  - user icon - image/initials
+   */
+  .mectrl_company,
+  .header_spacer,
+  #mectrl_currentAccount_picture {
+    display: none;
+  }
+
+  // LINKS
+  .mectrl_currentAccount {
+    // all links
+    a {
+      color: $link-color;
+      text-decoration: $link-text-decoration;
+    }
+
+    // sign-out link
+    #mectrl_body_signOut {
+      width: fit-content;
+      padding: 8px 0 0;
+      border-bottom: 2px solid $link-color;
+    }
+  }
+}

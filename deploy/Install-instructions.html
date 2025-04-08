@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installation Instructions</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #0078d4;
+      }
+      h1 {
+        border-bottom: 2px solid #0078d4;
+        padding-bottom: 10px;
+      }
+      h2 {
+        margin-top: 30px;
+      }
+      ol {
+        padding-left: 25px;
+      }
+      ul {
+        list-style-type: disc; /* Solid disc shape */
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        color: red !important;
+      }
+      p,
+      ol,
+      li {
+        color: black !important;
+      }
+
+      ul {
+        list-style-type: disc;
+      }
+      .note {
+        background-color: #f0f0f0;
+        padding: 15px;
+        border-left: 4px solid #0078d4;
+        margin: 20px 0;
+      }
+      .toc {
+        background-color: #f8f8f8;
+        padding: 15px 20px;
+        border-radius: 5px;
+        margin: 20px 0;
+        border: 1px solid #ddd;
+      }
+      .toc ul {
+        list-style-type: none;
+        padding-left: 10px;
+      }
+      .toc li {
+        margin-bottom: 8px;
+      }
+      .toc a {
+        text-decoration: none;
+        color: #0078d4;
+      }
+      .toc a:hover {
+        color: red !important;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>See Outlook browser extension</h1>
+    <p>
+      <strong>See Outlook</strong> is an accessibility extension for Chrome-based browsers. It
+      customizes Outlook's web interface for low vision users.
+    </p>
+    <p>
+      This <strong>See Outlook</strong> extension is distributed as a ZIP archive. Once unzipped,
+      the contents of the archive are intended to be sideloaded into the browser. Instructions on
+      how to sideload and update this extension are provided below.
+    </p>
+
+    <h2>Sideload Installation Instructions</h2>
+
+    <div class="toc">
+      <h3>Table of Contents</h3>
+      <ul>
+        <li><a href="#installation">Installation Steps</a></li>
+        <li><a href="#important">Important Notes</a></li>
+        <li><a href="#updating">Updating the Extension</a></li>
+      </ul>
+    </div>
+
+    <h3 id="installation">Installation Steps</h3>
+    <ol>
+      <li>
+        Extract this ZIP file to a permanent location on your computer <br />(Choose a location you
+        won't accidentally delete later)
+      </li>
+      <li>Open your Chrome-based browser (Chrome, Edge, Brave, Vivaldi, etc.)</li>
+      <li>
+        Access the Extensions page:
+        <ul>
+          <li>
+            Chrome, Brave, Vivaldi, etc.
+            <ul>
+              <li>Type "&lt;browser name&gt;://extensions" in the address bar</li>
+            </ul>
+          </li>
+          <li>Edge: Click the menu (- - - ) > Extensions</li>
+        </ul>
+      </li>
+      <li>Enable "Developer Mode" by toggling the switch in the top-right corner</li>
+      <li>Click the "Load unpacked" button</li>
+      <li>
+        Navigate to and select the extracted extension folder (the folder containing the
+        manifest.json file)
+      </li>
+      <li>The "See Outlook" extension should now appear in your extensions list</li>
+      <li>Visit https://outlook.live.com/ to see the extension in action</li>
+    </ol>
+
+    <h3 id="important">Important Notes</h3>
+    <div class="note">
+      <p>
+        When you restart your browser, you may see a warning about using developer mode extensions.
+        Click "Cancel" to keep the extension enabled.
+      </p>
+
+      <p>This extension only works on https://outlook.live.com/ as specified in the manifest.</p>
+    </div>
+
+    <h3 id="updating">Updating the Extension</h3>
+    <p>If you receive an updated version of this extension:</p>
+    <ol>
+      <li>Extract the new version to the same location, replacing the old files</li>
+      <li>Go to the extensions page in your browser</li>
+      <li>Find "See Outlook" and click the "Reload" icon (circular arrow)</li>
+      <li>Reload the Outlook page in your browser</li>
+    </ol>
+  </body>
+</html>

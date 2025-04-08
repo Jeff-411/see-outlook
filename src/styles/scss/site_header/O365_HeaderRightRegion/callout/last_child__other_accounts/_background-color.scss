@@ -1,0 +1,12 @@
+#mectrl_main_body ul.mectrl_accountList {
+  // Set base bg color
+  background-color: rgba(0, 0, 0, 0.04);
+
+  // Set transparent
+  .mectrl_accountItem,
+  .mectrl_accountItem a,
+  .mectrl_accountItemInfo {
+    // !important is required to handle both dark and light themes
+    background-color: transparent !important;
+  }
+}

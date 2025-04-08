@@ -1,0 +1,56 @@
+// Inbox body: debug - Oct 6, 2024
+#MailList .customScrollBar.jEpCF.R29xW {
+  // messages list
+  > div {
+    border: 3px solid black;
+
+    // message
+    > div {
+      border: 3px solid yellow;
+
+      // effective message wrapper
+      > .EeHm8 {
+        border: 3px solid blue;
+
+        // no sibs - div[id='...']
+        > div {
+          visibility: visible; // debug - placeholder
+
+          // no sibs - div[draggable="true"]
+          > div {
+            visibility: visible; // debug - placeholder
+
+            // no sibs - content wrapper
+            /** NOTE: Use a truncated selector (.lHRXq) to cover all states.
+             *  Outlook adds additional classes to the base .lHRXq class
+             *  to reflect the current state of the email (e.g. to highlight
+             *  the email the user has just finished reading). So just use
+             *  the base selector to cover all cases.
+             */
+            > .lHRXq {
+              visibility: visible; // debug - placeholder
+
+              // Mark as read
+              > .X1bn0 {
+                visibility: visible; // debug - placeholder
+              }
+
+              // MAIN CONTENT WRAPPER
+              > .ZTnQq {
+                // Top row
+                > .XG5Jd.hQj7T {
+                  border: 3px solid lime;
+                }
+
+                // Bottom row ( Attachments )
+                > .disableTextSelection.X4EZx.QMRWk {
+                  border: 3px solid pink;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

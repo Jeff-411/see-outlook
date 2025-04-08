@@ -1,0 +1,15 @@
+// ============================================================================
+// Requests confirmation when user attempts to delete an unsaved draft
+
+// discard modal - text
+p.ms-Dialog-subText {
+  font-size: var(--page-lg);
+  color: var(--black);
+}
+
+// discard modal - btns
+span.ms-Dialog-action > button {
+  height: 100%;
+  padding-top: var(--page-10);
+  padding-bottom: var(--page-10);
+}

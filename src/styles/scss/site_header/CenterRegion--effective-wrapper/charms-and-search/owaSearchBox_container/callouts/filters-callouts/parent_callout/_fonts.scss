@@ -1,0 +1,10 @@
+@use '../../../../../../../_abstracts/' as *;
+
+.ms-Callout-main:has([title='Search in']) > .YljlO {
+  // fonts
+  * {
+    font-size: $user-fs-md;
+    font-weight: $user-fw;
+    color: $user-text-color;
+  }
+}

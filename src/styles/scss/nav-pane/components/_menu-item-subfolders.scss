@@ -1,0 +1,7 @@
+@use '../vars-nav-pane' as *;
+
+.Yd48r:has(.kTUsm.a7Ps_) {
+  [draggable='true'] + .e4_J1 {
+    margin-left: $navpane-left-offset;
+  }
+}

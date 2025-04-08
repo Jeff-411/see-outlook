@@ -1,0 +1,7 @@
+@use '../colors' as *;
+@use '../fonts' as *;
+
+@mixin user-fw-and-color {
+  font-weight: $user-fw;
+  color: $user-text-color;
+}

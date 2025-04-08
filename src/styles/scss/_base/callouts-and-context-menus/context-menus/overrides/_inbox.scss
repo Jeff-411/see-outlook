@@ -1,0 +1,36 @@
+@use '../vars-context-menus' as *;
+
+// inbox menu overrides
+div.ms-ContextualMenu {
+  .ms-SearchBox {
+    padding: 8px !important;
+    margin-bottom: 6px !important;
+    border: 2px solid $context-menu-bd-color !important;
+
+    .ms-SearchBox-iconContainer {
+      width: fit-content !important;
+      margin-right: 10px !important;
+    }
+
+    input::placeholder {
+      color: $context-menu-separator-color;
+    }
+  }
+
+  i[data-icon-name='ChevronRight'] {
+    font-size: $context-menu-fs-sm;
+  }
+
+  button[name='Show in immersive reader'] span {
+    color: $context-menu-accent-color;
+  }
+
+  // Hide top section
+  button[name='Reply'],
+  button[name='Reply all'],
+  button[name='Forward'],
+  li:has(button[name='Forward']) + li // separator
+  {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+@use '../../../../../../../_abstracts/' as *;
+
+// Chevron dropdown > 'All folders' dropdown
+[aria-label='Search Scope Selector.'] {
+  font-family: $user-font-family;
+
+  button {
+    margin-bottom: 10px;
+    font-size: $user-fs-md;
+    line-height: $user-fs-md;
+    @include user-fw-and-color;
+  }
+
+  button[aria-selected='true'] {
+    background-color: $color-5;
+  }
+}

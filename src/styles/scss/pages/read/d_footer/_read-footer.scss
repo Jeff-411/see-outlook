@@ -1,0 +1,30 @@
+@use '../../../_abstracts/' as *;
+
+// Read page - footer
+.th6py.HJy2l {
+  justify-content: center;
+  margin: 0 0 var(--page-20) !important;
+  padding: var(--page-12) 0 !important;
+  border: 2px solid var(--black);
+  border-radius: 0 !important;
+
+  button {
+    height: fit-content !important;
+    margin: 0 var(--page-30) !important;
+    padding: var(--page-8) !important;
+    border: none;
+
+    &:hover {
+      color: var(--black);
+      background-color: $color-3;
+      border: 1px solid var(--black);
+    }
+  }
+
+  button,
+  i {
+    font-size: var(--read-atach-btm-text-size);
+    font-weight: var(--read-atach-btm-text-weight);
+    color: var(--read-atach-btm-text-color);
+  }
+}

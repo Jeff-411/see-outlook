@@ -1,0 +1,113 @@
+@use '../borders' as *;
+@use '../colors' as *;
+@use '../fonts' as *;
+@use '../mixins/onhover' as *;
+
+@mixin suggestionCallouts-base {
+  font-family: $user-font-family;
+
+  * {
+    font-size: $user-fs-md;
+    font-weight: $user-fw;
+    color: $user-text-color;
+  }
+}
+
+@mixin suggestionCallouts-title {
+  #suggestionHeader-list,
+  .ms-Suggestions-headerContainer {
+    display: none;
+  }
+}
+
+@mixin suggestionCallouts-menu-item {
+  // menu-item width
+  #suggestion-list div.ms-Suggestions-item,
+  #FloatingSuggestionsList div.item-root {
+    min-width: 600px;
+  }
+
+  /** menu-item hover
+   *  If the menu-item's persona has not been selected using the arrow keys,
+   *  `onhover--addHoverBorders-horizontal` will set the menu-item's 
+   *  background-color as well as its borders.
+   */
+  #suggestion-list div.ms-Suggestions-item:not(div.ms-Suggestions-item.is-suggested),
+  #FloatingSuggestionsList div.item-root:not(:has(button[role='option'].f1lyciwk)) {
+    @include onhover--addHoverBorders-horizontal($color-4);
+  }
+}
+
+@mixin suggestionCallouts-persona {
+  .DjFbO {
+    height: calc($user-fs-md + $user-fs-sm + 23px);
+    background-color: $user-bg;
+
+    > div // persona container
+    {
+      height: 100%;
+
+      .fng65 // persona - image
+      {
+        display: none;
+      }
+
+      .Umn8G.MwdHX // persona - email
+      {
+        font-size: $user-fs-sm; // Override base font-size.
+      }
+    }
+  }
+}
+
+/** 
+ *  Handle the border and background colors when
+ *  the keyboard arrows are used to select menu items.
+ */
+@mixin suggestionCallouts-persona-selected {
+  // wrappers - content
+  #suggestion-list .ms-Suggestions-item.is-suggested,
+  #FloatingSuggestionsList button[role='option'].f1lyciwk {
+    border: none !important;
+
+    .DjFbO {
+      background: $color-5 !important;
+    }
+  }
+
+  // wrappers
+  div.ms-Suggestions-item.is-suggested,
+  div.item-root:has(button[role='option'].f1lyciwk) {
+    border: none !important;
+    background: $color-5 !important;
+  }
+}
+
+@mixin suggestionCallouts-closeButton {
+  button.ms-Suggestions-closeButton,
+  button.item-closeButton {
+    min-width: fit-content;
+
+    background-color: transparent !important;
+
+    > span // icon wrapper
+    {
+      box-sizing: border-box;
+      width: fit-content;
+      height: fit-content;
+
+      > i {
+        align-self: baseline;
+        height: $user-fs-lg;
+        line-height: $user-fs-lg;
+        font-size: $user-fs-lg;
+        padding: 6px;
+
+        border: $user-border-md solid $user-text-color;
+        border-radius: 4px;
+
+        @include onhover-colors--bd-bg-el($color-1, $apply-to-element: true);
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@use './vars-site-header' as *;
+
+// Show site header on load and disable hide/show toggle
+#o365header {
+  margin-top: initial;
+  border-top: $border-width solid $border-color;
+  border-bottom: none;
+}

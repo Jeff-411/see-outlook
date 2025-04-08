@@ -1,0 +1,23 @@
+@use '../../_abstracts/injected-elements' as *;
+
+#custom_menu-top {
+  position: relative;
+  display: flex;
+  height: $custom_menu-top-height;
+
+  > div {
+    display: inline-flex;
+    height: 100%;
+  }
+
+  > #trigger-ribbon {
+    width: 10%;
+
+    background-color: $custom_ribbon-color;
+  }
+
+  > #trigger-siteHeader {
+    flex-grow: 1;
+    background-color: $custom_site-header-color;
+  }
+}

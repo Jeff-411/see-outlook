@@ -1,0 +1,103 @@
+@use '../../../../_abstracts/' as *;
+
+// top row
+.XG5Jd.hQj7T {
+  $message-fs: 48px;
+  $message-height: calc($message-fs * 1.35);
+
+  min-height: $message-height;
+  padding-left: 0 !important;
+
+  // wrapper - persona | sender | notifications
+  .mn28d.XG5Jd {
+    padding-left: 0 !important;
+
+    // persona/select icon: (before and after selection)
+    .XG5Jd.XJ3XJ.q0f8X.aDFCa.vbEPJ.DoCKv,
+    .XG5Jd.XJ3XJ.q0f8X.aDFCa.vbEPJ.XZpvY {
+      @include checkbox;
+    }
+
+    // sender name (unread | read)
+    .JBWmn.gy2aJ.Ejrkd,
+    .ESO13.gy2aJ.Ejrkd, // current
+    .DOWm0.gy2aJ.Ejrkd // new
+    {
+      font-size: $message-fs !important;
+      font-weight: $user-fw;
+      color: var(--black);
+      padding-left: 10px !important;
+    }
+
+    // notifications (attachment | reply | etc)
+    .bvdCQ {
+      align-self: center;
+      margin: 0 4px !important;
+      padding: 0 6px !important;
+      background-color: transparent;
+      i {
+        font-size: $user-fs-lg !important;
+        color: $color-1;
+      }
+    }
+  }
+
+  // subject & preview outer wrapper
+  .dTBo0 {
+    max-width: unset !important;
+    width: unset !important;
+    height: fit-content;
+    align-items: center;
+
+    // subject & preview inner wrapper
+    .ovvvr {
+      // subject
+      .gy2aJ.Ejrkd {
+        width: 100%;
+        font-size: $user-fs-lg !important;
+        font-weight: $user-fw;
+        color: var(--black);
+      }
+
+      // preview wrapper (hide)
+      .YH9yX {
+        display: none;
+        font-size: $user-fs-lg !important;
+        font-weight: $user-fw;
+        color: var(--black);
+      }
+    }
+  }
+
+  // inline buttons (e.g. Unsubscribe)
+  .O5h22.Gdkpt {
+    height: 40px;
+
+    .V8ZHt.xnPcy {
+      max-width: unset;
+      height: 40px;
+      margin: 0 20px;
+      background-color: transparent !important;
+      color: $color-1;
+      border: none;
+      border-radius: 0;
+      border-bottom: 2px solid $color-4;
+
+      .ms-Button-label {
+        font-size: $user-fs-md;
+        line-height: $user-fs-md;
+        font-weight: 400;
+      }
+    }
+  }
+
+  // time/date wrapper (hide)
+  .WP8_u {
+    display: none;
+    span {
+      font-size: $user-fs-md !important;
+      font-weight: $user-fw;
+      color: var(--black);
+    }
+  }
+}

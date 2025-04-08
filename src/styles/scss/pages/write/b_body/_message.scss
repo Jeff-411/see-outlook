@@ -1,0 +1,22 @@
+@mixin message {
+  margin-top: 20px;
+  margin-bottom: -100px; // default
+  margin-bottom: 0; //
+  background: var(--white);
+  color: var(--black);
+  overflow: hidden;
+  padding: 0;
+  border: none;
+
+  > div > div {
+    * {
+      font-size: var(--write-body-font-size) !important;
+      font-weight: var(--write-body-font-weight) !important;
+    }
+
+    ol,
+    ul {
+      padding-inline-start: var(--page-120);
+    }
+  }
+}

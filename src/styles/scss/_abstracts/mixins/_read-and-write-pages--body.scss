@@ -1,0 +1,29 @@
+@use '../fonts' as *;
+
+@mixin read-and-write-pages--body {
+  margin: 0;
+
+  touch-action: none !important;
+  touch-action: pan-y !important;
+
+  *:not(img) {
+    width: unset !important;
+    min-width: unset !important;
+    max-width: unset !important;
+    font-size: $user-fs-xlg !important;
+    font-weight: $user-fw !important;
+    line-height: 1.5 !important;
+  }
+
+  ol,
+  ul {
+    margin-left: $user-fs-xlg;
+  }
+
+  // Resizing btn (hide)
+  button[title='Show original size'] {
+    display: none;
+  }
+
+  // Use - full-size images: img { width: initial !important; }
+}

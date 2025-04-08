@@ -1,0 +1,34 @@
+// index: Search page - body
+@use '../../../_abstracts/fonts' as *;
+
+.customScrollBar.jEpCF.R29xW {
+  // Folder btns
+  ._mOk5.sUwI4.oyifS {
+    max-width: unset;
+    height: 40px;
+    margin: 0 20px !important;
+    color: var(--black);
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid var(--black);
+
+    > span {
+      font-size: $user-fs-md;
+      line-height: $user-fs-md;
+    }
+  }
+
+  // Top results btn
+  #groupHeaderTop results {
+    font-size: $user-fs-md;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    i {
+      font-size: $user-fs-md;
+      margin-right: 14px;
+    }
+  }
+
+  // Files
+}

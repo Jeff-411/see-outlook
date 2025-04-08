@@ -1,0 +1,54 @@
+@use '../../../../../_abstracts/' as *;
+@use '../../../vars-write' as *;
+
+// Write page recipients - selected recipient
+.dMm6A.AiSsJ > .QFieH.J8sYv > :nth-child(1) .ApKtB > [role='textbox'] {
+  > span._Entity // recipient container
+  {
+    display: flex;
+    margin-right: 8px;
+
+    > span.lpcWrapper // outer wrapper
+    {
+      max-width: unset;
+
+      > span // inner wrapper (pill)
+      {
+        height: unset;
+        border-color: red;
+        @include onhover--set-background;
+
+        // name
+        > span {
+          padding: 8px;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-weight: $user-fw;
+        }
+
+        // icon flex wrapper - placeholder
+        > i[data-icon-name='DismissRegular'] {
+          > span {
+            > i.fui-Icon-font {
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  span#others // "+ n other(s)"
+  {
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-color: lime;
+
+    // content
+    .EKTve {
+      max-width: fit-content;
+      height: fit-content;
+      padding: 8px;
+      border: $user-border-sm solid transparent;
+    }
+  }
+}

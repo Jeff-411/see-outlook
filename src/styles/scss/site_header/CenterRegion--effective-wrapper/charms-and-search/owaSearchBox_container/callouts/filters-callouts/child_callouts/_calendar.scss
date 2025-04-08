@@ -1,0 +1,106 @@
+@use '../../../../../../../_abstracts/' as *;
+
+// Chevron dropdown > calendar callout
+
+// outer wrapper
+div[aria-label='Calendar'] {
+  width: calc(24px * 21);
+
+  // all elements
+  * {
+    color: var(--black);
+    font-weight: 600;
+  }
+
+  // all btns
+  button {
+    margin: calc(24px * 0.4) 0;
+    font-size: 24px;
+  }
+
+  // outer wrapper
+  > div > div:nth-child(2) {
+    width: 100%;
+    border: 2px solid var(--black);
+
+    // content wrapper: header | calendar table
+    > div:nth-child(2) {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+
+      // header
+      > div:nth-child(1) {
+        height: unset;
+        line-height: unset;
+
+        // title ( Month & Year )
+        > button {
+          padding: 0px 4px 0px 10px;
+        }
+
+        // wrapper - nav btns wrapper ( up/down arrows to change month )
+        > div {
+          align-self: center;
+
+          // both btns
+          button {
+            width: unset;
+            height: unset;
+            line-height: unset;
+            padding: 0 10px;
+            margin: 0;
+            background: var(--white);
+            border: 2px solid var(--black);
+            border-radius: 4px;
+            i {
+              font-weight: 900;
+            }
+          }
+
+          // up-arrow btn
+          > button:first-child {
+            margin-right: calc(24px * 0.5);
+          }
+        }
+      }
+
+      // calendar table
+      table {
+        width: 100%;
+
+        // btn for today's date - only applies when today's date is not selected
+        button.ms-CalendarDay-dayIsToday[aria-selected='false'] {
+          box-sizing: content-box;
+          width: 100%;
+          height: 100%;
+          font-size: 36px;
+          background-color: var(--white) !important;
+          border: 6px solid $color-1;
+          border-radius: 0;
+        }
+
+        th {
+          padding: 24px 0 calc(24px * 0.5);
+          font-size: 24px;
+        }
+
+        td.ms-CalendarDay-daySelected {
+          background-color: $color-3 !important;
+          border: 1px solid var(--black);
+
+          button {
+            background-color: unset !important;
+            color: unset !important;
+            border-radius: unset;
+          }
+        }
+      }
+    }
+
+    // ~footer: 'Today' btn
+    > button {
+      margin-right: 10px;
+    }
+  }
+}

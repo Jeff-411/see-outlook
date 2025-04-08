@@ -1,0 +1,12 @@
+@use '../../_abstracts/' as *;
+
+.ms-Callout-container {
+  .ms-Callout {
+    width: fit-content;
+    border: $user-border-md solid $user-text-color;
+
+    > .ms-Callout-main {
+      min-width: fit-content;
+    }
+  }
+}

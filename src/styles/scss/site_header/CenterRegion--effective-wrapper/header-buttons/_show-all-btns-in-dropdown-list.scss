@@ -1,0 +1,67 @@
+@use '../../../_abstracts/' as *;
+@use '../vars-CenterRegion' as *;
+
+// Use Outlook's header buttons dropdown list at all reolutions
+
+/** Step 1: Force use of the header buttons dropdown list.
+ *  
+ *  Outlook uses a dropdown list to handle the overflow 
+ *  when the app's resolution doesn't leave enough space
+ *  to display all the header buttons on the main 
+ *  Site header bar.
+ *  
+ *  This code block finesses Outlook's `@media` rules so
+ *  it always uses this dropdown list -- regardless of
+ *  the current resolution.
+ */
+#headerButtonsRegionId {
+  > div:not(#owaChatCopilotButton_container):not(#OwaMergedNotificationPane_container) {
+    width: 5000px;
+  }
+}
+
+// Step 2: Style the  header buttons dropdown list.
+#headerButtonsRegionId + div {
+  height: 44px;
+
+  // "More" button
+  #O365_MainLink_Affordance {
+    background-color: $color-1;
+    color: white;
+
+    @include onhover--fade-background;
+
+    .ms-Icon--More {
+      font-size: $CenterRegion-fs-md !important;
+
+      &::before {
+        font-weight: 900 !important;
+      }
+    }
+  }
+
+  // effective dropdown wrapper
+  :nth-child(2) > div {
+    margin-top: $CenterRegion-header-btns-mt;
+
+    // dropdown list
+    ul {
+      // Hide menu items
+      li {
+        height: $CenterRegion-icon-size;
+        padding-left: 30px;
+        border-bottom: 1px solid var(--black);
+
+        i,
+        svg {
+          display: none;
+        }
+
+        label {
+          font-size: $CenterRegion-fs-md !important;
+          font-weight: $CenterRegion-fw;
+        }
+      }
+    }
+  }
+}

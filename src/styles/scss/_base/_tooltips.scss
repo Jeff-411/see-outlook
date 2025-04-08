@@ -1,0 +1,21 @@
+@use '../_abstracts/' as *;
+
+// Outlook tooltips
+.ms-Tooltip {
+  // Remove callout border around text
+  .ms-Callout-main {
+    border: none;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 226;
+  border: 2px solid $color-1;
+  * {
+    font-size: $user-fs-sm !important;
+    font-weight: $user-fw;
+    line-height: 1.5 !important;
+    background: $user-bg;
+    color: var(--black);
+  }
+}

@@ -1,0 +1,11 @@
+@use '../_abstracts/' as *;
+
+// borders
+$border-width: 10px;
+$border-color: $color-4;
+
+// Handle toggle action
+$base-height: 48px;
+$O365_NavHeader-border-width: 2px;
+$py: 0px;
+$top-margin: calc(($base-height + $O365_NavHeader-border-width + ($py * 2)) * -1);
