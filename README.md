@@ -8,16 +8,22 @@ This version of the **See Outlook** extension is distributed as a ZIP archive. O
 
 ## Usage
 
+> **IMPORTANT:**
+>
+> - Do NOT run `npm start`
+
 ### 1. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 2. Build production extension (`dist/` )
+### 2. Build production extension (`deploy/` )
+
+To build the production extension folder and add the ''key" property to `deploy/manifest.json` run:
 
 ```bash
-npm start
+npm run build
 ```
 
 ### 3. Create the ZIP archive for distribution
@@ -38,13 +44,20 @@ Detailed instructions on how to sideload and update this extension are available
 ## Available cli scripts
 
 ```bash
-# Build - Production mode
+# Do not run!
 npm start
+
+# Build - production mode with
+# injected manifest.json key
+npm run build
 
 # Build - Development mode
 npm run dev
 
-# Create `deploy-zip/See Outlook.zip` file for distribution
+# Inject key into deploy/manifest.json
+npm run postbuild
+
+# Create deploy-zip/See Outlook.zip
 npm run zip
 
 # Compile SCSS

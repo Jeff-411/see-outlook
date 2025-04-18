@@ -1,12 +1,6 @@
 # Project Structure
 
-See below for:
-
-1. the structure of the root project folder, and 
-2. the content of the `pkg/See Outlook.zip` zip file.
-
-## 1. Root folder
-
+<!-- prettier-ignore -->
 see-outlook/
 ├── dist/
 │     ├── custom.css
@@ -42,15 +36,3 @@ see-outlook/
 ├── README.md
 ├── webpack.config.js
 └── webpack.config.txt (a .txt version of webpack.config.js for use by Perplexity AI)
-
-## 2. Content of the `pkg/See Outlook.zip` zip file
-
-pkg/See Outlook.zip/
-├── dist/
-│     ├── custom.css
-│     ├── custom.js
-│     ├── scripts.js
-│     └── styles.js
-├── Install instructions.txt
-├── Install-instructions.html
-└── manifest.json
