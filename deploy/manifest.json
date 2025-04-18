@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "See Outlook",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Accessibility: Customizes Outlook for low vision users",
   "permissions": ["scripting"],
   "host_permissions": ["https://outlook.live.com/*"],
