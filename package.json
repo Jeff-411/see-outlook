@@ -7,7 +7,12 @@
     "postbuild": "node scripts/inject-manifest-key.js && node scripts/validate-manifest.js",
     "zip": "node scripts/zipFile.js",
     "dev": "webpack --mode development --watch",
-    "sass": "sass --watch src/styles/scss/main.scss dist/custom.css --no-source-map --style=compressed"
+    "sass": "sass --watch src/styles/scss/main.scss dist/custom.css --no-source-map --style=compressed",
+    "version:patch": "npm version patch -m \"Release version %s\"",
+    "version:minor": "npm version minor -m \"Release version %s\"",
+    "version:major": "npm version major -m \"Release version %s\"",
+    "release": "git push && git push --tags",
+    "version": "node scripts/sync-version.js && git add manifest.json"
   },
   "keywords": [],
   "author": "",
