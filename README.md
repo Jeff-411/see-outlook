@@ -4,7 +4,7 @@
 
 **See Outlook** is a Chrome Manifest V3-compliant browser extension that enhances some elements of Outlook's web interface for low vision users.
 
-This version of the **See Outlook** extension is distributed as a ZIP archive. Once unzipped, the contents of the archive are intended to be [sideloaded](#sideloading-and-updating-the-extension) into the browser .
+**Note:** This version of the **See Outlook** extension is distributed as a ZIP archive. Once unzipped, the contents of the archive are intended to be [sideloaded](#sideloading-and-updating-the-extension) into the browser .
 
 ## Usage
 
@@ -12,13 +12,15 @@ This version of the **See Outlook** extension is distributed as a ZIP archive. O
 
 ### Generate the Extension and ZIP Archive
 
+**Important:** Run the following two commands in sequence to ensure the extension ID is added to `maniffest.json` before creating the zip file.
+
 1. **Build the extension:** `npm run build`
    > **Explainer:**
    >
    > - This command first runs the build script to generate the "deploy/" extension folder.
    > - Then it automatically runs the postbuild script to:
    >   - inject the key in the `.env` file into deploy/manifest.json, and
-   >   - validate the deploy/manifest.json file
+   >   - validate the deploy/manifest.json file. &ndash; TODO
 2. **Generate distribution ZIP archive:** `npm run zip`
 
 ### Sideload the Extension
