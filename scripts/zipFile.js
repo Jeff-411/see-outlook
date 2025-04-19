@@ -5,7 +5,7 @@ const AdmZip = require('adm-zip')
 async function zipFile() {
   try {
     // Define the output directory and zip file name
-    const outputDir = path.join(__dirname, 'deploy-zip')
+    const outputDir = path.join(__dirname, '../deploy-zip')
     const outputFilePath = path.join(outputDir, 'See Outlook.zip')
 
     // Ensure the output directory exists

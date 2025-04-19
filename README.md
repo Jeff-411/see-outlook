@@ -2,51 +2,34 @@
 
 ## Description
 
-**See Outlook** is a Chrome Manifest V3-compliant browser extension that enhances Outlook's web interface for low vision users.
+**See Outlook** is a Chrome Manifest V3-compliant browser extension that enhances some elements of Outlook's web interface for low vision users.
 
-This version of the **See Outlook** extension is distributed as a ZIP archive. Once unzipped, the contents of the archive are intended to be [sideloaded](#sideloading-and-updating-the-extension) into the browser .
+**Note:** This version of the **See Outlook** extension is distributed as a ZIP archive. Once unzipped, the contents of the archive are intended to be [sideloaded](#sideloading-and-updating-the-extension) into the browser .
 
 ## Usage
 
-### 1. Install dependencies
+**Install dependencies:** `npm install`
 
-```bash
-npm install
-```
+### Generate the Extension and ZIP Archive
 
-### 2. Build production extension (`dist/` )
+**Important:** Run the following two commands in sequence to ensure the extension ID is added to `manifest.json` before creating the zip file.
 
-```bash
-npm start
-```
+1. **Build the extension:** `npm run build`
+   > **Explainer:**
+   >
+   > - This command first runs the build script to generate the "deploy/" extension folder.
+   > - Then it automatically runs the postbuild script to:
+   >   - inject the key in the `.env` file into deploy/manifest.json, and
+   >   - validate the deploy/manifest.json file. &ndash; TODO
+2. **Generate distribution ZIP archive:** `npm run zip`
 
-### 3. Create the ZIP archive for distribution
+### Sideload the Extension
 
-```bash
-npm run zip
-```
+For instructions on how to sideload and update this extension click [here](./docs/Install%20instructions.txt) (text version) or [here](./docs/Install-instructions.html) (HTML version).
 
-## Sideloading and updating the extension
+### Dev Notes
 
-Detailed instructions on how to sideload and update this extension are available in a couple of versions.
+The `package.json` file contains two additional scripts: **"dev"** and **"sass"**:
 
-- [TEXT](./docs/Install%20instructions.txt)
-- [HTML](./docs/Install-instructions.html)
-
-**NOTE**: If you have cloned the `see-outlook` repo, you can follow the above instructions using the `deploy` folder, rather than fiddling around with the zip file.
-
-## Available cli scripts
-
-```bash
-# Build - Production mode
-npm start
-
-# Build - Development mode
-npm run dev
-
-# Create `deploy-zip/See Outlook.zip` file for distribution
-npm run zip
-
-# Compile SCSS
-npm run sass
-```
+- **"dev":** To build the extension without running the postbuild scripts run: `npm run dev`
+- **"sass:"** The "sass" script in `package.json` is used by Webpack during the build process. Running it on its own is not recommended.

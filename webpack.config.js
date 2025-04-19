@@ -1,4 +1,4 @@
-// webpack.config.js (version: deploy)
+// webpack.config.js (issue 4)
 
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -37,6 +37,10 @@ module.exports = {
         {
           from: 'manifest.json',
           to: path.resolve(__dirname, 'deploy'),
+          transform(content) {
+            const manifest = JSON.parse(content.toString())
+            return JSON.stringify(manifest, null, 2)
+          },
         },
         {
           from: 'docs/Install instructions.txt',

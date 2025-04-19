@@ -3,9 +3,10 @@
   "description": "Chrome Manifest V3 browser extension enhancing Outlook's web interface for low vision users.",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack --mode production",
+    "build": "webpack --mode production",
+    "postbuild": "node scripts/inject-manifest-key.js",
+    "zip": "node scripts/zipFile.js",
     "dev": "webpack --mode development --watch",
-    "zip": "node zipFile.js",
     "sass": "sass --watch src/styles/scss/main.scss dist/custom.css --no-source-map --style=compressed"
   },
   "keywords": [],
@@ -24,6 +25,7 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
-    "adm-zip": "^0.5.16"
+    "adm-zip": "^0.5.16",
+    "dotenv": "^16.5.0"
   }
 }
