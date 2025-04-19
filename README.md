@@ -12,7 +12,7 @@
 
 ### Generate the Extension and ZIP Archive
 
-**Important:** Run the following two commands in sequence to ensure the extension ID is added to `maniffest.json` before creating the zip file.
+**Important:** Run the following two commands in sequence to ensure the extension ID is added to `manifest.json` before creating the zip file.
 
 1. **Build the extension:** `npm run build`
    > **Explainer:**
