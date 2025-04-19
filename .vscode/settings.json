@@ -2,6 +2,7 @@
   "cSpell.words": [
     "Ejrkd",
     "flexy",
+    "gupdate",
     "isloaded",
     "jszip",
     "navpane",
@@ -11,7 +12,8 @@
     "sideloaded",
     "Sideloading",
     "smartimation",
-    "systemvars"
+    "systemvars",
+    "updatecheck"
   ],
   "cSpell.ignorePaths": ["*.css", "outlook-knowledge-base"]
 }
