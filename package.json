@@ -1,7 +1,7 @@
 {
   "name": "see-outlook",
   "description": "Chrome Manifest V3 browser extension enhancing Outlook's web interface for low vision users.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "build": "webpack --mode production",
     "postbuild": "node scripts/inject-manifest-key.js && node scripts/validate-manifest.js",
