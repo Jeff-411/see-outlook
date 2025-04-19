@@ -8,14 +8,20 @@ const AdmZip = require('adm-zip')
  * @param {string} outputPath - Path where ZIP file should be saved
  * @returns {Promise<string>} Path to the created ZIP file
  */
-async function generateZip(outputPath = './See Outlook.zip') {
+// async function generateZip(outputPath = './See Outlook.zip') {
+async function generateZip() {
   const isCI = process.env.CI === 'true'
   const logPrefix = isCI ? '[Extension Package]' : ''
 
   try {
     const zip = new AdmZip()
-    const rootDir = path.resolve(__dirname, '..')
-    const deployDir = path.join(rootDir, 'deploy')
+    // const rootDir = path.resolve(__dirname, '..')
+    // const outputDir = path.join(rootDir, 'deploy')
+    // Define the output directory and zip file name
+    // const outputDir = path.join(__dirname, '../deploy-zip')
+    // const outputFilePath = path.join(outputDir, 'See Outlook.zip')
+    const outputDir = path.join(__dirname, '../deploy-zip')
+    const outputFilePath = path.join(outputDir, 'See Outlook.zip')
 
     // Files to include - these are required
     const requiredFiles = ['manifest.json']
@@ -44,8 +50,8 @@ async function generateZip(outputPath = './See Outlook.zip') {
     }
 
     // Write the ZIP file
-    const outputFilePath = path.resolve(rootDir, outputPath)
-    zip.writeZip(outputFilePath)
+    // zip.writeZip(outputFilePath)
+    await zip.writeZipPromise(outputFilePath)
     console.log(`${logPrefix} Extension packaged successfully: ${outputFilePath}`)
 
     return outputFilePath
