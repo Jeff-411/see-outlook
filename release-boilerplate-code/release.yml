@@ -1,0 +1,75 @@
+# Release Boilerplate Extension > .github/workflows/release.yml
+
+name: Release Extension
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create extension package
+        run: node scripts/makeDistZip.js
+
+      - name: Generate updates.xml
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/v}
+          REPO_URL=$(node -p "require('./scripts/constants').REPO_URL")
+          cat > updates.xml << EOF
+          <?xml version='1.0' encoding='UTF-8'?>
+          <gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
+            <app appid='${EXTENSION_ID}'>
+              <updatecheck codebase='${REPO_URL}/releases/download/v${VERSION}/Releases Boilerplate.zip' version='${VERSION}' />
+            </app>
+          </gupdate>
+          EOF
+        env:
+          EXTENSION_ID: ${{ secrets.EXTENSION_ID }}
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Extension Package
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./Releases Boilerplate.zip
+          asset_name: Releases Boilerplate.zip
+          asset_content_type: application/zip
+
+      - name: Upload updates.xml
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./updates.xml
+          asset_name: updates.xml
+          asset_content_type: application/xml
