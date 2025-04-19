@@ -3,6 +3,8 @@
   "name": "See Outlook",
   "version": "1.0.0",
   "description": "Accessibility: Customizes Outlook for low vision users",
+  "homepage_url": "https://github.com/Jeff-411/see-outlook",
+  "update_url": "https://github.com/Jeff-411/see-outlook/raw/main/updates.xml",
   "permissions": ["scripting"],
   "host_permissions": ["https://outlook.live.com/*"],
   "content_scripts": [
