@@ -1,3 +1,4 @@
+// scripts/inject-manifest-key.js
 const fs = require('fs')
 const path = require('path')
 require('dotenv').config() // Use regular dotenv, not the webpack plugin

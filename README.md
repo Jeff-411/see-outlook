@@ -20,7 +20,7 @@
    > - This command first runs the build script to generate the "deploy/" extension folder.
    > - Then it automatically runs the postbuild script to:
    >   - inject the key in the `.env` file into deploy/manifest.json, and
-   >   - validate the deploy/manifest.json file. &ndash; TODO
+   >   - validate the deploy/manifest.json file.
 2. **Generate distribution ZIP archive:** `npm run zip`
 
 ### Sideload the Extension

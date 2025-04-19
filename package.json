@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
-    "postbuild": "node scripts/inject-manifest-key.js",
+    "postbuild": "node scripts/inject-manifest-key.js && node scripts/validate-manifest.js",
     "zip": "node scripts/zipFile.js",
     "dev": "webpack --mode development --watch",
     "sass": "sass --watch src/styles/scss/main.scss dist/custom.css --no-source-map --style=compressed"
