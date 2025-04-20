@@ -1,4 +1,5 @@
+_dev
 node_modules
-deploy/
+# deploy/
 deploy-zip/
 .env

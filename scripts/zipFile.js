@@ -1,60 +1,34 @@
+// scripts/zipFile.js (original)
 const fs = require('fs')
 const path = require('path')
 const AdmZip = require('adm-zip')
 
-/**
- * Creates a ZIP package of the extension
- * @returns {Promise<void>}
- */
 async function zipFile() {
-  const logPrefix = process.env.CI === 'true' ? '[Extension Package]' : ''
-
   try {
-    // Define paths
-    const rootDir = path.resolve(__dirname, '..')
-    const deployDir = path.join(rootDir, 'deploy')
-    const outputDir = path.join(rootDir, 'deploy-zip')
-    const outputFilePath = path.join(rootDir, 'See Outlook.zip')
+    // Define the output directory and zip file name
+    const outputDir = path.join(__dirname, '../deploy-zip')
+    const outputFilePath = path.join(outputDir, 'See Outlook.zip')
 
-    // Required files to include
-    const requiredFiles = [
-      'manifest.json',
-      'dist/custom.css',
-      'dist/scripts.js',
-      'deploy/Install instructions.txt',
-      'deploy/Install-instructions.html',
-    ]
-
-    // Validate required files exist
-    const missingFiles = requiredFiles.filter(file => !fs.existsSync(path.join(rootDir, file)))
-
-    if (missingFiles.length > 0) {
-      throw new Error(`Missing required files: ${missingFiles.join(', ')}`)
+    // Ensure the output directory exists
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true })
+      console.log(`Created directory: ${outputDir}`)
     }
 
     // Create a new instance of AdmZip
     const zip = new AdmZip()
 
-    // Add required files
-    for (const file of requiredFiles) {
-      const filePath = path.join(rootDir, file)
-      const dirname = path.dirname(file)
-      zip.addLocalFile(filePath, dirname === '.' ? '' : dirname)
-      console.log(`${logPrefix} Added required file: ${file}`)
-    }
+    // Add the entire 'deploy/' folder to the zip archive
+    zip.addLocalFolder('./deploy')
 
-    // Write the zip file
+    // Write the zip file to the specified directory
     await zip.writeZipPromise(outputFilePath)
-    console.log(`${logPrefix} Extension packaged successfully: ${outputFilePath}`)
+
+    console.log(`Zip file created successfully: ${outputFilePath}`)
   } catch (error) {
-    console.error(`${logPrefix} Error creating zip file:`, error)
-    process.exit(1)
+    console.error(`Error while creating zip file: ${error.message}`)
   }
 }
 
-// Execute if run directly
-if (require.main === module) {
-  zipFile()
-}
-
-module.exports = { zipFile }
+// Call the function
+zipFile()
